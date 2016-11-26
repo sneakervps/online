@@ -202,7 +202,7 @@ class ControllerCatalogRecurring extends Controller {
                   }
                 
             }
-            $this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
+           // $this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
 		}
 
 		//$this->getList();

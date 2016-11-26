@@ -19,7 +19,7 @@
                         <h3 class="panel-title"><i class="fa fa-list"></i> 商品列表</h3> </div>
                     <div class="panel-body">
                         
-                       <form action="<?php echo $priceaction; ?>" method="post" enctype="multipart/form-data" id="form-product" class="form-horizontal">
+                       <form action="<?php echo $priceaction; ?>" method="post" enctype="multipart/form-data" id="form-price" class="form-horizontal">
                            
                             <div class="table-responsive">
                                 <table class="table table-bordered table-hover">
@@ -31,7 +31,7 @@
                                              <td class="text-center"><lable>特价:</lable><input id="specials" class="form-control" name="specials" type="text" value=""></td>
                                              <td class="text-center"><lable>特价时间:</lable><input id="specialstime" class="form-control" name="specialstime" type="text" value=""></td>
                                              <td class="text-center"><lable>价格:</lable><input id="price" class="form-control" name="price" type="text" value=""></td>
-                                            <td class="text-right"><button type="submit" form="form-category" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
+                                            <td class="text-right"><button type="submit" form="form-price" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
                                         </tr>
                                         
                                     </tbody>
@@ -48,7 +48,7 @@
                     
                     
                    <div class="panel-body">
-                       <form action="<?php echo $statusaction; ?>" method="post" enctype="multipart/form-data" id="form-product" class="form-horizontal">
+                       <form action="<?php echo $statusaction; ?>" method="post" enctype="multipart/form-data" id="form-status" class="form-horizontal">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-hover">
                                     <tbody>
@@ -61,7 +61,7 @@
                                              <option value="1">上架</option>
                                              </select>
                                             </td>
-                                            <td class="text-right"><button type="submit" form="form-category" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
+                                            <td class="text-right"><button type="submit" form="form-status" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
                                         </tr>
                                         
                                     </tbody>
@@ -75,7 +75,7 @@
                     
        
                     <div class="panel-body">
-                       <form action="<?php echo $westernunionaction; ?>" method="post" enctype="multipart/form-data" id="form-product" class="form-horizontal">
+                       <form action="<?php echo $westernunionaction; ?>" method="post" enctype="multipart/form-data" id="form-westernun" class="form-horizontal">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-hover">
                                     <tbody>
@@ -84,7 +84,7 @@
                                              <td class="text-center"><lable>First Name(名字):</lable><input id="firstname" class="form-control" name="firstname" type="text" value=""></td>
                                              <td class="text-center"><lable>Last Name(姓):</lable><input id="lastname" class="form-control" name="lastname" type="text" value=""></td>
                                              <td class="text-center"><lable>电话:</lable><input id="telephone" class="form-control" name="telephone" type="text" value=""></td>
-                                            <td class="text-right"><button type="submit" form="form-category" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
+                                            <td class="text-right"><button type="submit" form="form-westernun" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
                                         </tr>
                                         
                                     </tbody>

@@ -951,3 +951,7 @@
 2016-11-25 8:54:48 - PHP Notice:  Undefined variable: statusdata in D:\wamp\www\online\admin\controller\catalog\recurring.php on line 182
 2016-11-25 8:54:57 - PHP Notice:  Undefined variable: statusdata in D:\wamp\www\online\admin\controller\catalog\recurring.php on line 182
 2016-11-25 8:56:44 - PHP Notice:  Undefined variable: result in D:\wamp\www\online\admin\controller\catalog\recurring.php on line 201
+2016-11-26 7:22:31 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\controller\catalog\product.php on line 352
+2016-11-26 7:22:31 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\controller\catalog\product.php on line 354
+2016-11-26 7:22:55 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\controller\catalog\product.php on line 314
+2016-11-26 7:22:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 105
