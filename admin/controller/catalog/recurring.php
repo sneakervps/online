@@ -98,10 +98,10 @@ class ControllerCatalogRecurring extends Controller {
                 
             }
 
-			//$this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
 		}
 
-		$this->getList();
+		//$this->getList();
 	}
    
     
@@ -148,9 +148,10 @@ class ControllerCatalogRecurring extends Controller {
                   }
                 
             }
+            $this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
 		}
 
-		$this->getList();
+		//$this->getList();
 	}   
     
     
@@ -201,9 +202,10 @@ class ControllerCatalogRecurring extends Controller {
                   }
                 
             }
+            $this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
 		}
 
-		$this->getList();
+		//$this->getList();
 	}   
     
     
