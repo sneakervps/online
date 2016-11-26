@@ -955,3 +955,7 @@
 2016-11-26 7:22:31 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\controller\catalog\product.php on line 354
 2016-11-26 7:22:55 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\controller\catalog\product.php on line 314
 2016-11-26 7:22:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 105
+2016-11-26 7:55:12 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\controller\catalog\product.php on line 314
+2016-11-26 7:55:12 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 105
+2016-11-26 7:55:58 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\controller\catalog\product.php on line 314
+2016-11-26 7:55:58 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 105

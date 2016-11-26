@@ -209,6 +209,74 @@ class ControllerCatalogRecurring extends Controller {
 	}   
     
     
+ 
+
+      
+  public function sizeedit() {
+		$this->load->language('catalog/recurring');
+
+		$this->document->setTitle($this->language->get('heading_title'));
+
+		$this->load->model('catalog/recurring');
+
+		if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
+            
+            if (isset($this->request->post['model'])) {
+			$sizedata['model'] = $this->request->post['model'];
+            }
+            
+            if (isset($this->request->post['options_name'])) {
+			$sizedata['options_name'] = $this->request->post['options_name'];
+            }
+            
+            if (isset($this->request->post['options_size'])) {
+			$sizedata['options_size'] = $this->request->post['options_size'];
+            }
+            
+            if (isset($this->request->post['options_name1'])) {
+			$sizedata['options_name1'] = $this->request->post['options_name1'];
+            }
+            
+            if (isset($this->request->post['options_size1'])) {
+			$sizedata['options_size1'] = $this->request->post['options_size1'];
+            }
+            
+            if($sizedata['model']!=''){
+              $key="Y4filUxH";
+              $sizedata['key']=$key;
+              $sizedata['postdate']='sizeedit';  
+                /*
+              $url[1]='http://www.sneakeradd.me/online.php';
+              $url[2]='http://www.sneakerbook.top/online.php';
+              $url[3]='http://www.footwearlocker.cc/online.php';
+              $url[4]='http://www.sneakerpage.ru/online.php';
+              $url[5]='http://www.sneakerjump.us/online.php';
+              $url[6]='http://www.sneakerfile.cc/online.php';
+              $url[7]='http://www.stayfashion.ru/online.php';
+              $url[8]='http://www.sneakersite.ru/online.php';
+              $url[9]='http://www.sneakerahead.ru/online.php';
+              */
+                
+                var_dump($sizedata);
+                exit();
+                
+                $url[5]='http://www.sneakerjump.us/online.php';
+            /****************************/
+                foreach ($url as $key=>$value) {
+                    $result=$this->curl_post($value, $sizedata);
+                    if($result) echo $key;
+                  }
+                
+            }
+
+			$this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
+		}
+
+		//$this->getList();
+	}
+    
+    
+    
     
     
     
@@ -351,7 +419,7 @@ class ControllerCatalogRecurring extends Controller {
         $data['priceaction'] = $this->url->link('catalog/recurring/priceadd', 'token=' . $this->session->data['token'], true);
         $data['statusaction'] = $this->url->link('catalog/recurring/statusedit', 'token=' . $this->session->data['token'], true);
         $data['westernunionaction'] = $this->url->link('catalog/recurring/westernunionedit', 'token=' . $this->session->data['token'], true);
-        
+        $data['sizeaction'] = $this->url->link('catalog/recurring/sizeedit', 'token=' . $this->session->data['token'], true);
         
         
         
