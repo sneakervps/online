@@ -245,7 +245,6 @@ class ControllerCatalogRecurring extends Controller {
               $key="Y4filUxH";
               $sizedata['key']=$key;
               $sizedata['postdate']='sizeedit';  
-                /*
               $url[1]='http://www.sneakeradd.me/online.php';
               $url[2]='http://www.sneakerbook.top/online.php';
               $url[3]='http://www.footwearlocker.cc/online.php';
@@ -255,12 +254,6 @@ class ControllerCatalogRecurring extends Controller {
               $url[7]='http://www.stayfashion.ru/online.php';
               $url[8]='http://www.sneakersite.ru/online.php';
               $url[9]='http://www.sneakerahead.ru/online.php';
-              */
-                
-                var_dump($sizedata);
-                exit();
-                
-                $url[5]='http://www.sneakerjump.us/online.php';
             /****************************/
                 foreach ($url as $key=>$value) {
                     $result=$this->curl_post($value, $sizedata);
