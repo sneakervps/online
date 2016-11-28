@@ -80,7 +80,7 @@ class ControllerCatalogRecurring extends Controller {
             if($pricedata['model']!=''||$pricedata['name']!=''){
               $key="Y4filUxH";
               $pricedata['key']=$key;
-              $statusdata['postdate']='priceadd';  
+              $pricedata['postdate']='priceadd';  
               $url[1]='http://www.sneakeradd.me/online.php';
               $url[2]='http://www.sneakerbook.top/online.php';
               $url[3]='http://www.footwearlocker.cc/online.php';

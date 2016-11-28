@@ -290,7 +290,7 @@ function curl_post($url, $data)
     
 function frename($dirname){
     
- $imgcount=0;
+ $imgcount=4;
     
   if(!is_dir($dirname)){
   exit();

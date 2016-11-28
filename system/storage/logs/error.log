@@ -959,3 +959,8 @@
 2016-11-26 7:55:12 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 105
 2016-11-26 7:55:58 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\controller\catalog\product.php on line 314
 2016-11-26 7:55:58 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 105
+2016-11-28 3:03:02 - PHP Notice:  Undefined index: name in D:\wamp\www\online\admin\controller\catalog\recurring.php on line 80
+2016-11-28 3:03:16 - PHP Notice:  Undefined index: name in D:\wamp\www\online\admin\controller\catalog\recurring.php on line 80
+2016-11-28 3:19:24 - PHP Notice:  Undefined index: category in D:\wamp\www\online\admin\controller\catalog\product.php on line 67
+2016-11-28 3:20:07 - PHP Notice:  Undefined index: category in D:\wamp\www\online\admin\controller\catalog\product.php on line 67
+2016-11-28 3:20:41 - PHP Notice:  Undefined index: category in D:\wamp\www\online\admin\controller\catalog\product.php on line 67

@@ -109,17 +109,17 @@
                                         <tr>
                                             <td class="text-center">
                                              <input name="selected[]" value="42" type="checkbox"> </td>
-                                             <td class="text-center"><input class="form-control" name="name<?php echo $key; ?>" type="text" value="<?php echo $product_value['name'];  ?>"></td>
-                                             <td class="text-center"><input class="form-control" name="category<?php echo $key; ?>" type="text" value=""></td>
-                                             <td class="text-center"><input class="form-control" name="model<?php echo $key; ?>" type="text" value="<?php echo $product_value['model'];  ?>"></td>
-                                             <td style="display:none;" class="text-center"><input class="form-control" name="imagedir<?php echo $key; ?>" type="text" value="<?php echo $product_value['image_dir'];  ?>"></td>
-                                              <td style="display:none;" class="text-center"><input class="form-control" name="image<?php echo $key; ?>" type="text" value="<?php echo $product_value['image'];  ?>"></td>
-                                             <td class="text-center"><input class="form-control" name="price<?php echo $key; ?>" type="text" value=""></td>
-                                             <td class="text-center"><input id="optionname" class="form-control" name="optiona<?php echo $key; ?>" type="text" value=""></td>
-                                             <td class="text-center"><input id="optionvalue" class="form-control" name="valuea<?php echo $key; ?>" type="text" value=""></td>
-                                             <td class="text-center"><input id="optionname1" class="form-control" name="optionb<?php echo $key; ?>" type="text" value=""></td>
-                                             <td class="text-center"><input id="optionvalue1" class="form-control" name="valueb<?php echo $key; ?>" type="text" value=""></td>
-                                            <td class="text-right"><button type="submit" form="form-category" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
+                                             <td class="text-center"><input class="form-control" name="name1" type="text" value="<?php echo $product_value['name'];  ?>"></td>
+                                             <td class="text-center"><input class="form-control" name="category1" type="text" value=""></td>
+                                             <td class="text-center"><input class="form-control" name="model1" type="text" value="<?php echo $product_value['model'];  ?>"></td>
+                                             <td style="display:none;" class="text-center"><input class="form-control" name="imagedir1" type="text" value="<?php echo $product_value['image_dir'];  ?>"></td>
+                                              <td style="display:none;" class="text-center"><input class="form-control" name="image1" type="text" value="<?php echo $product_value['image'];  ?>"></td>
+                                             <td class="text-center"><input class="form-control" name="price1" type="text" value=""></td>
+                                             <td class="text-center"><input id="optionname" class="form-control" name="optiona1" type="text" value=""></td>
+                                             <td class="text-center"><input id="optionvalue" class="form-control" name="valuea1" type="text" value=""></td>
+                                             <td class="text-center"><input id="optionname1" class="form-control" name="optionb1" type="text" value=""></td>
+                                             <td class="text-center"><input id="optionvalue1" class="form-control" name="valueb1" type="text" value=""></td>
+                                            <td class="text-right"><button type="submit" form="form-product" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
                                         </tr>
                                         
                                         
