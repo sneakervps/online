@@ -734,9 +734,19 @@ class ModelCatalogProduct extends Model {
     }
     /*************eof查询下级分类****************/       
     
+  
+    /*************bof当天发布商品数量****************/   
+    public function getProductNum() {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "upload_products");
+        return $query->rows;
+    }
+    /*************eof当天发布商品数量****************/    
     
-    
-    
+       /*************bof当天发布商品数量****************/   
+    public function updateProductNum($data) {
+        $this->db->query("UPDATE " . DB_PREFIX . "upload_products SET products_date_added = '" . $this->db->escape($data['products_date_added']) . "' , products_number='" . $this->db->escape($data['products_number']) . "'");
+    }
+    /*************eof当天发布商品数量****************/   
     
     
     

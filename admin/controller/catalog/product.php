@@ -290,8 +290,20 @@ function curl_post($url, $data)
     
 function frename($dirname){
     
- $imgcount=4;
     
+   $productnum=$this->model_catalog_product->getProductNum();
+   $data['products_date_added'] = date('Y-m-d');
+    if($productnum[0]['products_date_added']!=$data['products_date_added']){
+         $data['products_number']=0;
+         $this->model_catalog_product->updateProductNum($data);
+         $imgcount=0;
+    }else{
+        $imgcount=$productnum[0]['products_number'];
+        $data['products_number']=$imgcount+1;
+        $this->model_catalog_product->updateProductNum($data);
+    }
+    
+
   if(!is_dir($dirname)){
   exit();
  }
