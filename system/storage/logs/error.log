@@ -1614,3 +1614,5 @@
 2016-11-29 2:51:44 - PHP Notice:  Undefined index: category_id in D:\wamp\www\online\admin\controller\catalog\product.php on line 518
 2016-11-29 2:51:44 - PHP Notice:  Undefined index: category_id in D:\wamp\www\online\admin\controller\catalog\product.php on line 518
 2016-11-29 7:14:53 - PHP Notice:  Undefined index: products_number in D:\wamp\www\online\admin\model\catalog\product.php on line 748
+2016-11-29 8:14:16 - PHP Notice:  Undefined variable: pricedata in D:\wamp\www\online\admin\controller\catalog\recurring.php on line 130
+2016-11-29 8:15:32 - PHP Notice:  Undefined variable: pricedata in D:\wamp\www\online\admin\controller\catalog\recurring.php on line 130

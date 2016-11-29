@@ -115,9 +115,6 @@
                                        
                                        
                                        <?php foreach($product as $key=>$product_value){   ?>
-    
-
-                                       
                                         <tr>
                                             <td class="text-center">
                                              <input name="selected[]" value="42" type="checkbox"> </td>
@@ -133,8 +130,6 @@
                                              <td class="text-center"><input id="optionvalue1" class="form-control" name="valueb1" type="text" value=""></td>
                                             <td class="text-right"><button type="submit" form="form-product" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
                                         </tr>
-                                        
-                                        
                                      <?php   } ?> 
                                         
                                     </tbody>

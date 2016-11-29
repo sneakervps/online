@@ -82,13 +82,35 @@ if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='westernunionedit'&&$_POST['f
 
 
 
-/*
-$_POST['key']='Y4filUxH';
-$_POST['postdate']='sizeedit';
-$_POST['model']='1611049';
-$_POST['options_name']='Size';
-$_POST['options_size']='38|||39|||40|||41|||42|||43|||44|||45';
-*/
+
+
+
+/*********bof更新产品名字*******/
+if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='updatename'&&$_POST['product_name']!=''&&$_POST['model']!='') {
+
+	$product_name=zen_db_prepare_input($_POST['product_name']);
+	$model=zen_db_prepare_input($_POST['model']);
+    $products = $db -> Execute ("SELECT * FROM " . TABLE_PRODUCTS . " WHERE products_model='" . $model . "'");
+    if ($products -> RecordCount () > 0) { 
+		$products_id=$products -> fields['products_id'];
+        $db -> Execute ("UPDATE " . TABLE_PRODUCTS_DESCRIPTION . " SET `products_name`='".$product_name."' WHERE `products_id`='".$products_id."'");
+    }
+    echo 'ok';
+    
+}
+/*********bof更新产品名字*******/
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*********bof更新鞋子尺码*******/
 if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='sizeedit'&&$_POST['model']!='') {

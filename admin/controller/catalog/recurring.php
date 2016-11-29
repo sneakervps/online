@@ -109,6 +109,57 @@ class ControllerCatalogRecurring extends Controller {
     
     
     
+    
+  public function updatename() {
+		$this->load->language('catalog/recurring');
+
+		$this->document->setTitle($this->language->get('heading_title'));
+
+		$this->load->model('catalog/recurring');
+
+		if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
+            
+            if (isset($this->request->post['model'])) {
+			$productnamedata['model'] = $this->request->post['model'];
+            }
+            
+            if (isset($this->request->post['product_name'])) {
+			$productnamedata['product_name'] = $this->request->post['product_name'];
+            }
+                  
+            if($productnamedata['model']!=''&&$productnamedata['product_name']!=''){
+              $key="Y4filUxH";
+              $productnamedata['key']=$key;
+              $productnamedata['postdate']='updatename';  
+              $url[1]='http://www.sneakeradd.me/online.php';
+              $url[2]='http://www.sneakerbook.top/online.php';
+              $url[3]='http://www.footwearlocker.cc/online.php';
+              $url[4]='http://www.sneakerpage.ru/online.php';
+              $url[5]='http://www.sneakerjump.us/online.php';
+              $url[6]='http://www.sneakerfile.cc/online.php';
+              $url[7]='http://www.stayfashion.ru/online.php';
+              $url[8]='http://www.sneakersite.ru/online.php';
+              $url[9]='http://www.sneakerahead.ru/online.php';
+                
+            /****************************/
+                foreach ($url as $key=>$value) {
+                    $result=$this->curl_post($value, $productnamedata);
+                    if($result) echo $key;
+                  }
+                
+            }
+
+			$this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
+		}
+
+		//$this->getList();
+	}   
+    
+    
+    
+    
+    
+    
    public function statusedit() {
 		$this->load->language('catalog/recurring');
 
@@ -413,6 +464,7 @@ class ControllerCatalogRecurring extends Controller {
         $data['statusaction'] = $this->url->link('catalog/recurring/statusedit', 'token=' . $this->session->data['token'], true);
         $data['westernunionaction'] = $this->url->link('catalog/recurring/westernunionedit', 'token=' . $this->session->data['token'], true);
         $data['sizeaction'] = $this->url->link('catalog/recurring/sizeedit', 'token=' . $this->session->data['token'], true);
+        $data['productnameaction'] = $this->url->link('catalog/recurring/updatename', 'token=' . $this->session->data['token'], true);
         
         
         

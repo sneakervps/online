@@ -72,7 +72,32 @@
                             <div class="col-sm-6 text-left"></div>
                         </div>
                     </div>
+       
                     
+                    
+                    
+                    
+                 <div class="panel-body">
+                       <form action="<?php echo $productnameaction; ?>" method="post" enctype="multipart/form-data" id="form-productname" class="form-horizontal">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:100px;" class="text-left">更新商品名称</td>
+                                             <td style="width:300px;" class="text-center"><lable>型号:</lable><input id="model" class="form-control" name="model" type="text" value=""></td>
+                                            <td class="text-center"><lable>商品名称:</lable><input id="product_name" class="form-control" name="product_name" type="text" value=""></td>
+                                            <td class="text-right"><button type="submit" form="form-productname" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-sm-6 text-left"></div>
+                        </div>
+                    </div>                      
+                                              
+                                                                        
   
                    
                    
