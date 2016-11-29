@@ -488,8 +488,14 @@ function resize($src,$w,$h)
        // $product_name=$this->fname('images');
         $data['action'] = $this->url->link('catalog/product/add', 'token=' . $this->session->data['token'], true);
         
+        
+        $data['token']=$this->session->data['token'];
         $data['product']=$product;
             
+        $data['topcategories']=$this->model_catalog_product->getTopcategories();
+        
+       // $data['topcategories']=$this->model_catalog_product->getSubCategories(624);
+        
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
@@ -498,9 +504,28 @@ function resize($src,$w,$h)
 	}
 
     
+ 
     
     
-    
+    /************************/
+    public function ajaxcate() {
+        $this->load->model('catalog/product');
+        $categories_str='';
+        $cataid=$_GET['checkValue']; 
+        $categories = $this->model_catalog_product->getSubCategories($cataid);
+        
+        if($categories){
+             echo '<option disabled="" selected="">选择分类</option>';
+        foreach ($categories as $category) {
+            echo '<option value="'.$category['categories_id'].'">'.$category['categories_name'].'</option>';
+         }
+        }else{
+            echo '<option disabled="" selected="">没有子分类</option>';
+        }
+        
+        
+    }
+/************************/
     
     
     

@@ -709,4 +709,39 @@ class ModelCatalogProduct extends Model {
 
 		return $query->row['total'];
 	}
+    
+    
+    /*************bof添加代码****************/
+    
+    
+    
+    
+    
+    
+     /*************bof查询一级分类****************/   
+    public function getTopcategories() {
+        $query = $this->db->query("SELECT cd.categories_name,c.categories_id FROM " . DB_PREFIX . "categories c LEFT JOIN " . DB_PREFIX . "categories_description cd ON (c.categories_id = cd.categories_id) WHERE c.parent_id =0 ORDER BY c.sort_order");
+        return $query->rows;
+    }
+    /*************eof查询一级分类****************/     
+    
+    
+    
+    /*************bof查询下级分类****************/   
+    public function getSubCategories($categories_id) {
+        $query = $this->db->query("SELECT cd.categories_name, c.categories_id FROM " . DB_PREFIX . "categories c LEFT JOIN " . DB_PREFIX . "categories_description cd ON (c.categories_id = cd.categories_id) WHERE c.parent_id =".$categories_id." ORDER BY c.sort_order");
+        return $query->rows;
+    }
+    /*************eof查询下级分类****************/       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

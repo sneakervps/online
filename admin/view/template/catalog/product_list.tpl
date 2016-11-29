@@ -22,17 +22,29 @@
                     <div class="panel-body">
                         <div class="well">
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-sm-2">
                                     <div class="form-group">
-                                        <label class="control-label" for="input-name">商品名称</label>
-                                        <input name="filter_name" value="" placeholder="商品名称" id="input-name" class="form-control" autocomplete="off" type="text">
-                                        <ul class="dropdown-menu"></ul>
+                                        <label class="control-label" for="input-name">分类</label>
+                                        <select id="select_id" name="topcata" class="form-control">
+                                         <option disabled="" selected="">选择一级分类</option>
+                                           <?php foreach($topcategories as $key=>$categorie_value){  
+                                           
+                                           echo '<option value="'.$categorie_value['categories_id'].'">'.$categorie_value['categories_name'].'</option>';
+                                           
+                                          }  ?>
+                                        </select>
+                                        
+                                        
+                                        <select id="select_id1" name="topcata1" class="form-control">
+                                           <option disabled="" selected="">选择二级分类</option>
+                                        </select>
+                                        
+                                        <select id="select_id2" name="topcata2" class="form-control">
+                                          <option disabled="" selected="">选择三级分类</option>
+                                        </select>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label" for="input-model">型号</label>
-                                        <input name="filter_model" value="" placeholder="型号" id="input-model" class="form-control" autocomplete="off" type="text">
-                                        <ul class="dropdown-menu"></ul>
-                                    </div>
+                                    
+                                
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
@@ -110,7 +122,7 @@
                                             <td class="text-center">
                                              <input name="selected[]" value="42" type="checkbox"> </td>
                                              <td class="text-center"><input class="form-control" name="name1" type="text" value="<?php echo $product_value['name'];  ?>"></td>
-                                             <td class="text-center"><input class="form-control" name="category1" type="text" value=""></td>
+                                             <td class="text-center"><input class="form-control" id="cate" name="category1" type="text" value=""></td>
                                              <td class="text-center"><input class="form-control" name="model1" type="text" value="<?php echo $product_value['model'];  ?>"></td>
                                              <td style="display:none;" class="text-center"><input class="form-control" name="imagedir1" type="text" value="<?php echo $product_value['image_dir'];  ?>"></td>
                                               <td style="display:none;" class="text-center"><input class="form-control" name="image1" type="text" value="<?php echo $product_value['image'];  ?>"></td>
@@ -156,6 +168,49 @@
               $('#optionname1').val(optionname);
               $('#optionvalue1').val(optionvalue);
             });
+            
+            $("#select_id").change(function(){
+                 var topcateid=$("#select_id").val();
+                  $.get('index.php?route=catalog/product/ajaxcate&token=<?php echo $token; ?>',{'checkValue':$("#select_id").val()},function(data){
+                     $('#select_id1').html(data);
+                     $('#select_id2').html('<option disabled="" selected="">选择三级分类</option>');
+                  });  
+                
+                  var checkText1=$("#select_id").find("option:selected").text();
+                  var catevalue=checkText1;
+                  $('#cate').html(catevalue);
+                  $('#cate').val(catevalue);
+                
+                
+            });
+            
+            
+           $("#select_id1").change(function(){
+                 var twocateid=$("#select_id1").val();
+                 $.get('index.php?route=catalog/product/ajaxcate&token=<?php echo $token; ?>',{'checkValue':$("#select_id1").val()},function(data){
+                     $('#select_id2').html(data);
+                  });     
+               
+                  var checkText1=$("#select_id").find("option:selected").text();
+                  var checkText2=$("#select_id1").find("option:selected").text();
+                  var catevalue=checkText1+'|||'+checkText2;
+                  $('#cate').html(catevalue);
+                  $('#cate').val(catevalue);
+               
+               
+            });
+            
+            
+             $("#select_id2").change(function(){
+                  var checkText1=$("#select_id").find("option:selected").text();
+                  var checkText2=$("#select_id1").find("option:selected").text();
+                  var checkText3=$("#select_id2").find("option:selected").text();
+                  var catevalue=checkText1+'|||'+checkText2+'|||'+checkText3;
+                  $('#cate').html(catevalue);
+                  $('#cate').val(catevalue);
+             });
+            
+            
         </script>
         
         
