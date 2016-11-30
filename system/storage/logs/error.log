@@ -1616,3 +1616,22 @@
 2016-11-29 7:14:53 - PHP Notice:  Undefined index: products_number in D:\wamp\www\online\admin\model\catalog\product.php on line 748
 2016-11-29 8:14:16 - PHP Notice:  Undefined variable: pricedata in D:\wamp\www\online\admin\controller\catalog\recurring.php on line 130
 2016-11-29 8:15:32 - PHP Notice:  Undefined variable: pricedata in D:\wamp\www\online\admin\controller\catalog\recurring.php on line 130
+2016-11-29 9:07:32 - PHP Notice:  Undefined index: extension in D:\wamp\www\online\admin\controller\catalog\product.php on line 344
+2016-11-29 9:07:32 - PHP Notice:  Undefined index: extension in D:\wamp\www\online\admin\controller\catalog\product.php on line 344
+2016-11-30 2:33:45 - PHP Notice:  Undefined variable: aimUrl in D:\wamp\www\online\admin\controller\catalog\product.php on line 334
+2016-11-30 2:58:06 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\controller\catalog\product.php on line 409
+2016-11-30 2:58:06 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\controller\catalog\product.php on line 411
+2016-11-30 2:58:57 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\controller\catalog\product.php on line 409
+2016-11-30 2:58:57 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\controller\catalog\product.php on line 411
+2016-11-30 3:01:14 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\controller\catalog\product.php on line 409
+2016-11-30 3:01:14 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\controller\catalog\product.php on line 411
+2016-11-30 3:02:32 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\controller\catalog\product.php on line 410
+2016-11-30 3:02:32 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\controller\catalog\product.php on line 412
+2016-11-30 3:02:35 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\controller\catalog\product.php on line 325
+2016-11-30 3:02:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 117
+2016-11-30 3:03:59 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\controller\catalog\product.php on line 325
+2016-11-30 3:03:59 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 117
+2016-11-30 3:06:19 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\controller\catalog\product.php on line 325
+2016-11-30 3:06:19 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 117
+2016-11-30 3:07:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 117
+2016-11-30 3:07:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 117

@@ -112,9 +112,11 @@
                                     </thead>
                                     
                                     <tbody>
+                                       <?php
                                        
-                                       
-                                       <?php foreach($product as $key=>$product_value){   ?>
+                                            if(isset($product)){
+                                         
+                                           foreach($product as $key=>$product_value){   ?>
                                         <tr>
                                             <td class="text-center">
                                              <input name="selected[]" value="42" type="checkbox"> </td>
@@ -130,7 +132,12 @@
                                              <td class="text-center"><input id="optionvalue1" class="form-control" name="valueb1" type="text" value=""></td>
                                             <td class="text-right"><button type="submit" form="form-product" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
                                         </tr>
-                                     <?php   } ?> 
+                                     <?php  } }else{
+                                                echo '<tr><td colspan="9" style="color:red;font-size:18px;" class="text-center">上传新图片文件夹</td></tr>';
+                                            }
+                                       
+                                        
+                                          ?> 
                                         
                                     </tbody>
                                 </table>

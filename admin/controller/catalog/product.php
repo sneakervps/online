@@ -289,8 +289,6 @@ function curl_post($url, $data)
     
     
 function frename($dirname){
-    
-    
    $productnum=$this->model_catalog_product->getProductNum();
    $data['products_date_added'] = date('Y-m-d');
     if($productnum[0]['products_date_added']!=$data['products_date_added']){
@@ -315,6 +313,7 @@ function frename($dirname){
            $fn = iconv('GB2312','UTF-8',$fn);
            $imgcount++;
            $products=$this->imagerename($curDir,$imgcount);
+           $this->unlinkDir($curDir);
            $product[$imgcount]['image']=$products['image'];
            $product[$imgcount]['image_dir']=$products['image_dir'];
            $product[$imgcount]['model']=$products['model'];
@@ -322,10 +321,56 @@ function frename($dirname){
           
        }
    }
-    
-   return $product;
+   
+    if(isset($product)){
+        return $product;
+    }
     
 }
+    
+
+    
+    
+ function createDir($aimUrl) {
+        $aimUrl = str_replace('', '/', $aimUrl);
+        $aimDir = '';
+        $arr = explode('/', $aimUrl);
+        $result = true;
+        foreach ($arr as $str) {
+            $aimDir .= $str . '/';
+            if (!file_exists($aimDir)) {
+                $result = mkdir($aimDir);
+            }
+        }
+        return $result;
+    }    
+    
+    
+
+    
+function unlinkDir($aimDir) {
+        $aimDir = str_replace('', '/', $aimDir);
+        $aimDir = substr($aimDir, -1) == '/' ? $aimDir : $aimDir . '/';
+        if (!is_dir($aimDir)) {
+            return false;
+        }
+        $dirHandle = opendir($aimDir);
+        while (false !== ($file = readdir($dirHandle))) {
+            if ($file == '.' || $file == '..') {
+                continue;
+            }
+            if (!is_dir($aimDir . $file)) {
+                FileUtil :: unlinkFile($aimDir . $file);
+            } else {
+                FileUtil :: unlinkDir($aimDir . $file);
+            }
+        }
+        closedir($dirHandle);
+        return rmdir($aimDir);
+    }    
+    
+    
+    
     
     
     
@@ -341,18 +386,21 @@ function imagerename($imagedirname,$imgcount){
              $path = pathinfo($curDir);
              $products_image_name=date("md");
              $products_image_name='16'.$products_image_name.$imgcount;
+             $pathname='../upload/'.date("Ym").'/'.$products_image_name;
             if($path['extension']=='jpg'||$path['extension']=='JPG'){
                 if($i==0){
-                  @$newname = $path['dirname'].'/'.$products_image_name.'.jpg';
-                  $image_url=$image_url.'http://www.sneakerjump.us/images/'.date("Ym").'/'.date("d").'/'.$products_image_name.'.jpg<br />';
-                  $image_url_main='http://www.sneakerjump.us/images/'.date("Ym").'/'.date("d").'/'.$products_image_name.'.jpg';
+                  $this->createDir($pathname);
+                  @$newname = $pathname.'/'.$products_image_name.'.jpg';
+                  $image_url=$image_url.'http://930.perfectkick.org/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg<br />';
+                  $image_url_main='http://930.perfectkick.org/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg';
                   $product[$imgcount]['image_name']= $products_image_name; 
                   $product[$imgcount]['image_dir']= date("Ym").'/'.date("d"); 
                 }else{
-                  @$newname = $path['dirname'].'/'.$products_image_name.'_'.$count.'.jpg';
-                  $addimage_url=$addimage_url.'|||'.'http://www.sneakerjump.us/images/'.date("Ym").'/'.date("d").'/'.$products_image_name.'_'.$count.'.jpg';
+                  @$newname = $pathname.'/'.$products_image_name.'_'.$count.'.jpg';
+                  $addimage_url=$addimage_url.'|||'.'http://930.perfectkick.org/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'_'.$count.'.jpg';
                 }
 
+                
                 //图片压缩成800,600
                 $this->resize($curDir,1000,800);
                 rename($curDir,$newname);   

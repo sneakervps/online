@@ -747,6 +747,9 @@ class ModelCatalogProduct extends Model {
         $this->db->query("UPDATE " . DB_PREFIX . "upload_products SET products_date_added = '" . $this->db->escape($data['products_date_added']) . "' , products_number='" . $this->db->escape($data['products_number']) . "'");
     }
     /*************eof当天发布商品数量****************/   
+ 
+  
+
     
     
     
