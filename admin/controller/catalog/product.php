@@ -360,9 +360,9 @@ function unlinkDir($aimDir) {
                 continue;
             }
             if (!is_dir($aimDir . $file)) {
-                FileUtil :: unlinkFile($aimDir . $file);
+                $this->unlinkFile($aimDir . $file);
             } else {
-                FileUtil :: unlinkDir($aimDir . $file);
+                $this->unlinkDir($aimDir . $file);
             }
         }
         closedir($dirHandle);
@@ -370,10 +370,17 @@ function unlinkDir($aimDir) {
     }    
     
     
+  function unlinkFile($aimUrl) {
+        if (file_exists($aimUrl)) {
+            unlink($aimUrl);
+            return true;
+        } else {
+            return false;
+        }
+    }    
     
     
-    
-    
+
 function imagerename($imagedirname,$imgcount){
     $image_url='';
     $addimage_url='';
@@ -391,13 +398,13 @@ function imagerename($imagedirname,$imgcount){
                 if($i==0){
                   $this->createDir($pathname);
                   @$newname = $pathname.'/'.$products_image_name.'.jpg';
-                  $image_url=$image_url.'http://930.perfectkick.org/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg<br />';
-                  $image_url_main='http://930.perfectkick.org/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg';
+                  $image_url=$image_url.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg<br />';
+                  $image_url_main='http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg';
                   $product[$imgcount]['image_name']= $products_image_name; 
                   $product[$imgcount]['image_dir']= date("Ym").'/'.date("d"); 
                 }else{
                   @$newname = $pathname.'/'.$products_image_name.'_'.$count.'.jpg';
-                  $addimage_url=$addimage_url.'|||'.'http://930.perfectkick.org/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'_'.$count.'.jpg';
+                  $addimage_url=$addimage_url.'|||'.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'_'.$count.'.jpg';
                 }
 
                 

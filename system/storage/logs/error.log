@@ -1635,3 +1635,328 @@
 2016-11-30 3:06:19 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 117
 2016-11-30 3:07:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 117
 2016-11-30 3:07:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\product_list.tpl on line 117
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: data in D:\wamp\www\online\admin\controller\catalog\category.php on line 20
+2016-11-30 8:01:40 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\system\engine\loader.php on line 83
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: header in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 1
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: column_left in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 1
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: add in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 5
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: button_add in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 5
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 5
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 5
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: button_delete in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 6
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: text_confirm in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 6
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: heading_title in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 8
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: breadcrumbs in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 10
+2016-11-30 8:01:40 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 10
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: error_warning in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 17
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: success in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 22
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: text_list in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 29
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: delete in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 32
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 38
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: sort_name in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 41
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: column_name in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 41
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 43
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: sort_sort_order in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 46
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: column_sort_order in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 46
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: column_action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 48
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: categories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 52
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: text_no_results in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 67
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: pagination in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 75
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: results in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 76
+2016-11-30 8:01:40 - PHP Notice:  Undefined variable: footer in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 82
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: data in D:\wamp\www\online\admin\controller\catalog\category.php on line 20
+2016-11-30 8:01:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\system\engine\loader.php on line 83
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: header in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 1
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: column_left in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 1
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: add in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 5
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: button_add in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 5
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 5
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 5
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: button_delete in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 6
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: text_confirm in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 6
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: heading_title in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 8
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: breadcrumbs in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 10
+2016-11-30 8:01:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 10
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: error_warning in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 17
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: success in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 22
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: text_list in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 29
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: delete in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 32
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 38
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: sort_name in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 41
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: column_name in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 41
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 43
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: sort_sort_order in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 46
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: column_sort_order in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 46
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: column_action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 48
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: categories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 52
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: text_no_results in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 67
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: pagination in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 75
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: results in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 76
+2016-11-30 8:01:42 - PHP Notice:  Undefined variable: footer in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 82
+2016-11-30 8:07:34 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 171
+2016-11-30 8:07:34 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:07:34 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:07:34 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:07:34 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:07:34 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:07:35 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 171
+2016-11-30 8:07:35 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:07:35 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:07:35 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:07:35 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:07:35 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:08:18 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 171
+2016-11-30 8:08:18 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:08:18 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:08:18 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:08:18 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:08:18 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 178
+2016-11-30 8:08:56 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:56 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:56 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:56 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:56 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:56 - PHP Notice:  Undefined variable: pagination in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 75
+2016-11-30 8:08:57 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:57 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:57 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:57 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:57 - PHP Notice:  Undefined variable: category_total in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 8:08:58 - PHP Notice:  Undefined variable: pagination in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 75
+2016-11-30 8:09:16 - PHP Notice:  Undefined variable: pagination in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 75
+2016-11-30 8:09:16 - PHP Notice:  Undefined variable: results in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 76
+2016-11-30 8:09:18 - PHP Notice:  Undefined variable: pagination in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 75
+2016-11-30 8:09:18 - PHP Notice:  Undefined variable: results in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 76
+2016-11-30 8:09:37 - PHP Notice:  Undefined variable: pagination in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 75
+2016-11-30 8:09:37 - PHP Notice:  Undefined variable: results in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 76
+2016-11-30 8:15:41 - PHP Notice:  Undefined variable: pagination in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 75
+2016-11-30 8:15:41 - PHP Notice:  Undefined variable: results in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 76
+2016-11-30 8:26:00 - PHP Notice:  Array to string conversion in D:\wamp\www\online\admin\controller\catalog\category.php on line 31
+2016-11-30 8:42:18 - PHP Warning:  preg_match_all(): Unknown modifier 'p' in D:\wamp\www\online\admin\controller\catalog\category.php on line 31
+2016-11-30 8:42:43 - PHP Notice:  Array to string conversion in D:\wamp\www\online\admin\controller\catalog\category.php on line 32
+2016-11-30 8:47:14 - PHP Warning:  iconv() expects parameter 3 to be string, array given in D:\wamp\www\online\admin\controller\catalog\category.php on line 32
+2016-11-30 8:47:17 - PHP Warning:  iconv() expects parameter 3 to be string, array given in D:\wamp\www\online\admin\controller\catalog\category.php on line 32
+2016-11-30 8:47:35 - PHP Warning:  iconv() expects parameter 3 to be string, array given in D:\wamp\www\online\admin\controller\catalog\category.php on line 33
+2016-11-30 8:47:51 - PHP Notice:  iconv(): Detected an illegal character in input string in D:\wamp\www\online\admin\controller\catalog\category.php on line 33
+2016-11-30 8:48:07 - PHP Notice:  iconv(): Detected an illegal character in input string in D:\wamp\www\online\admin\controller\catalog\category.php on line 33
+2016-11-30 8:48:09 - PHP Notice:  iconv(): Detected an illegal character in input string in D:\wamp\www\online\admin\controller\catalog\category.php on line 33
+2016-11-30 8:48:25 - PHP Notice:  iconv(): Detected an illegal character in input string in D:\wamp\www\online\admin\controller\catalog\category.php on line 33
+2016-11-30 8:48:43 - PHP Notice:  iconv(): Detected an illegal character in input string in D:\wamp\www\online\admin\controller\catalog\category.php on line 33
+2016-11-30 8:49:30 - PHP Notice:  iconv(): Detected an illegal character in input string in D:\wamp\www\online\admin\controller\catalog\category.php on line 30
+2016-11-30 8:49:30 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\category.php on line 34
+2016-11-30 8:49:30 - PHP Notice:  Undefined variable: productname in D:\wamp\www\online\admin\controller\catalog\category.php on line 35
+2016-11-30 8:49:33 - PHP Notice:  iconv(): Detected an illegal character in input string in D:\wamp\www\online\admin\controller\catalog\category.php on line 30
+2016-11-30 8:49:33 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\category.php on line 34
+2016-11-30 8:49:33 - PHP Notice:  Undefined variable: productname in D:\wamp\www\online\admin\controller\catalog\category.php on line 35
+2016-11-30 8:50:09 - PHP Notice:  Undefined variable: productname in D:\wamp\www\online\admin\controller\catalog\category.php on line 35
+2016-11-30 8:50:45 - PHP Notice:  Undefined variable: productname in D:\wamp\www\online\admin\controller\catalog\category.php on line 35
+2016-11-30 8:58:31 - PHP Warning:  preg_match_all(): Unknown modifier 't' in D:\wamp\www\online\admin\controller\catalog\category.php on line 35
+2016-11-30 9:01:52 - PHP Warning:  preg_match_all(): Unknown modifier '\' in D:\wamp\www\online\admin\controller\catalog\category.php on line 35
+2016-11-30 9:06:11 - PHP Warning:  preg_match_all(): Unknown modifier '+' in D:\wamp\www\online\admin\controller\catalog\category.php on line 39
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 74
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 76
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 77
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 78
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 83
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 84
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: page in D:\wamp\www\online\admin\controller\catalog\category.php on line 85
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 126
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 150
+2016-11-30 9:21:00 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 151
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 74
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 76
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 77
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 78
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 83
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 84
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: page in D:\wamp\www\online\admin\controller\catalog\category.php on line 85
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 126
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 150
+2016-11-30 9:21:04 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 151
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 74
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 76
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 77
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 78
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 83
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 84
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: page in D:\wamp\www\online\admin\controller\catalog\category.php on line 85
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 126
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 150
+2016-11-30 9:21:06 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 151
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 79
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 82
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 83
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 84
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 89
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 90
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: page in D:\wamp\www\online\admin\controller\catalog\category.php on line 91
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 132
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 156
+2016-11-30 9:21:42 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 157
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 79
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 82
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 83
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: url in D:\wamp\www\online\admin\controller\catalog\category.php on line 84
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 89
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 90
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: page in D:\wamp\www\online\admin\controller\catalog\category.php on line 91
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 132
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 156
+2016-11-30 9:21:44 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 157
+2016-11-30 9:22:12 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 105
+2016-11-30 9:22:12 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 106
+2016-11-30 9:22:12 - PHP Notice:  Undefined variable: page in D:\wamp\www\online\admin\controller\catalog\category.php on line 107
+2016-11-30 9:22:12 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 148
+2016-11-30 9:22:12 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 172
+2016-11-30 9:22:12 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 173
+2016-11-30 9:22:21 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 142
+2016-11-30 9:22:21 - PHP Notice:  Undefined variable: sort in D:\wamp\www\online\admin\controller\catalog\category.php on line 166
+2016-11-30 9:22:21 - PHP Notice:  Undefined variable: order in D:\wamp\www\online\admin\controller\catalog\category.php on line 167
+2016-11-30 9:25:53 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:25:57 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:27:57 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:28:09 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:29:31 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:29:31 - PHP Notice:  Undefined variable: product_name in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 82
+2016-11-30 9:31:45 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:31:45 - PHP Notice:  Undefined variable: product_name in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 82
+2016-11-30 9:33:29 - PHP Notice:  Undefined variable: images in D:\wamp\www\online\admin\controller\catalog\category.php on line 105
+2016-11-30 9:33:29 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:34:19 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:34:25 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:34:32 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:36:54 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:36:54 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:36:54 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 94
+2016-11-30 9:36:54 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 95
+2016-11-30 9:36:54 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 96
+2016-11-30 9:37:28 - PHP Notice:  Undefined variable: action in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 59
+2016-11-30 9:37:28 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:37:28 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 94
+2016-11-30 9:37:28 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 95
+2016-11-30 9:37:28 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 96
+2016-11-30 9:38:21 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:38:21 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 94
+2016-11-30 9:38:21 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 95
+2016-11-30 9:38:21 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 96
+2016-11-30 9:38:28 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:38:28 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 94
+2016-11-30 9:38:28 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 95
+2016-11-30 9:38:28 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 96
+2016-11-30 9:39:37 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:39:37 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 93
+2016-11-30 9:39:37 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 94
+2016-11-30 9:41:39 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 90
+2016-11-30 9:41:39 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 91
+2016-11-30 9:41:39 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:42:46 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 91
+2016-11-30 9:42:46 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:43:30 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 91
+2016-11-30 9:43:30 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:44:01 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 91
+2016-11-30 9:44:01 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:44:16 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 91
+2016-11-30 9:44:16 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:50:02 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 91
+2016-11-30 9:50:02 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:50:43 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 91
+2016-11-30 9:50:43 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:51:09 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 91
+2016-11-30 9:51:09 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 9:58:27 - PHP Notice:  Undefined index: category in D:\wamp\www\online\admin\controller\catalog\category.php on line 69
+2016-11-30 10:00:44 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\controller\catalog\category.php on line 264
+2016-11-30 10:00:44 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 10:02:29 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 92
+2016-11-30 10:05:22 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-11-30 10:05:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-11-30 10:05:22 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 124
+2016-11-30 10:06:20 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 124
+2016-11-30 10:06:47 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 124
+2016-11-30 10:06:47 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 168
+2016-11-30 10:06:47 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 184
+2016-11-30 10:08:06 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 124
+2016-12-01 2:39:53 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 2:39:53 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 2:39:53 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 170
+2016-12-01 2:39:53 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 186
+2016-12-01 2:40:04 - PHP Notice:  Undefined variable: model in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 123
+2016-12-01 2:40:04 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 124
+2016-12-01 2:40:20 - PHP Notice:  Undefined variable: product_value in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 124
+2016-12-01 3:15:13 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 3:15:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 3:15:13 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 169
+2016-12-01 3:15:13 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 185
+2016-12-01 3:15:22 - PHP Notice:  Array to string conversion in D:\wamp\www\online\admin\controller\catalog\category.php on line 265
+2016-12-01 3:16:22 - PHP Notice:  Array to string conversion in D:\wamp\www\online\admin\controller\catalog\category.php on line 265
+2016-12-01 3:17:20 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 3:17:20 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 3:17:20 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 169
+2016-12-01 3:17:20 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 185
+2016-12-01 3:17:25 - PHP Notice:  Array to string conversion in D:\wamp\www\online\admin\controller\catalog\category.php on line 265
+2016-12-01 3:33:32 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 3:33:32 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 3:33:32 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 169
+2016-12-01 3:33:32 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 185
+2016-12-01 3:50:18 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 3:50:18 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 3:50:18 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 169
+2016-12-01 3:50:18 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 185
+2016-12-01 4:13:55 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 4:13:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 4:13:55 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 169
+2016-12-01 4:13:55 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 185
+2016-12-01 4:17:27 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 4:17:27 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 4:17:27 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 169
+2016-12-01 4:17:27 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 185
+2016-12-01 4:57:19 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 4:57:19 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 4:57:19 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 169
+2016-12-01 4:57:19 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 185
+2016-12-01 4:57:44 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\category.php on line 260
+2016-12-01 4:59:53 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 4:59:53 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 4:59:53 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 168
+2016-12-01 4:59:53 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 184
+2016-12-01 6:38:23 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:38:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:38:23 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 168
+2016-12-01 6:38:23 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 184
+2016-12-01 6:39:21 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:39:21 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:39:21 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 168
+2016-12-01 6:39:21 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 184
+2016-12-01 6:39:56 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:39:56 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:39:56 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 168
+2016-12-01 6:39:56 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 184
+2016-12-01 6:52:44 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:52:44 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:52:44 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 172
+2016-12-01 6:52:44 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 188
+2016-12-01 6:53:01 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:53:01 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 6:53:01 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 172
+2016-12-01 6:53:01 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 188
+2016-12-01 7:10:22 - PHP Notice:  Undefined property: stdClass::$fields in D:\wamp\www\online\admin\model\catalog\category.php on line 333
+2016-12-01 7:11:48 - PHP Notice:  Undefined index: categories_id in D:\wamp\www\online\admin\model\catalog\category.php on line 333
+2016-12-01 7:13:48 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 7:13:48 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 7:13:48 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 172
+2016-12-01 7:13:48 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 188
+2016-12-01 7:14:16 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 7:14:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 7:14:16 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 172
+2016-12-01 7:14:16 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 188
+2016-12-01 7:15:00 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 7:15:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 7:15:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 172
+2016-12-01 7:15:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 188
+2016-12-01 7:17:32 - PHP Notice:  Undefined variable: topcategories in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 7:17:32 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 68
+2016-12-01 7:17:32 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 172
+2016-12-01 7:17:32 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 188
+2016-12-01 7:22:36 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-01 7:22:36 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-01 7:24:23 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-01 7:24:23 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189

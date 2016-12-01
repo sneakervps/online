@@ -8,10 +8,13 @@ class ControllerCatalogCategory extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/category');
+        $this->load->model('catalog/product');
 
 		$this->getList();
 	}
 
+    
+    
 	public function add() {
 		$this->load->language('catalog/category');
 
@@ -19,130 +22,310 @@ class ControllerCatalogCategory extends Controller {
 
 		$this->load->model('catalog/category');
 
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_category->addCategory($this->request->post);
+        
+        if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
+            if (isset($this->request->post['model1'])) {
+			$data['model'] = $this->request->post['model1'];
+            }
+            
+            if (isset($this->request->post['name1'])) {
+			$data['title'] = $this->request->post['name1'];
+            }
+            
+            if (isset($this->request->post['imagedir1'])) {
+			$data['images_dir'] = $this->request->post['imagedir1'];
+            }
+            
+            if (isset($this->request->post['image1'])) {
+			$data['images'] = $this->request->post['image1'];
+            }        
+            
+            if (isset($this->request->post['price1'])) {
+			$data['price'] = $this->request->post['price1'];
+            }              
+             
+            if (isset($this->request->post['category1'])) {
+			$data['category'] = $this->request->post['category1'];
+            }  
+            
+            if (isset($this->request->post['optiona1'])) {
+			$data['options_name'] = $this->request->post['optiona1'];
+            }             
+           
+            
+            if (isset($this->request->post['valuea1'])) {
+			$data['options_size'] = $this->request->post['valuea1'];
+            }  
+            
+            if (isset($this->request->post['optionb1'])) {
+			$data['options_name1'] = $this->request->post['optionb1'];
+            }             
+  
+            if (isset($this->request->post['valueb1'])) {
+			$data['options_size1'] = $this->request->post['valueb1'];
+            }               
+            $data['quantity']='99';
+            
+          
+          if($data['category']!=''&&$data['model']!=''&&$data['title']!=''&&$data['images_dir']!=''&&$data['images']!=''&&$data['price']!=''){
+              
+              
+              setcookie("price", $data['price'] );
+              setcookie("category", $data['category']);
+              
+              
+              $cats = array_filter(explode('|||', $data['category']));
+              $language_id=2;   //语言id
+              $parent_id = 0;
+                foreach ($cats as $key => $value) {
+                    $parent_id=$this->model_catalog_category->create_category($value, $parent_id, $language_id);
+                }
+              
+              
+             // $url='http://www.sneakerjump.us/jk.php';
+              /****************************/
+             /* $url[1]='http://www.sneakeradd.me/jk.php';
+              $url[2]='http://www.sneakerbook.top/jk.php';
+              $url[4]='http://www.footwearlocker.cc/jk.php';
+              $url[5]='http://www.sneakerpage.ru/jk.php';
+              $url[6]='http://www.sneakerjump.us/jk.php';
+              $url[7]='http://www.sneakerfile.cc/jk.php';
+              $url[8]='http://www.stayfashion.ru/jk.php';
+              $url[9]='http://www.sneakerahead.ru/jk.php';
+              $url[10]='http://www.sneakersite.ru/jk.php';*/
+              
+              //$key="Y4filUxH";
+               $url[1]='http://www.9201688.com/jk.php';
+               //$url[2]='http://www.9201688.com/jk.php';
+            /****************************/
 
-			$this->session->data['success'] = $this->language->get('text_success');
-
-			$url = '';
-
-			if (isset($this->request->get['sort'])) {
-				$url .= '&sort=' . $this->request->get['sort'];
-			}
-
-			if (isset($this->request->get['order'])) {
-				$url .= '&order=' . $this->request->get['order'];
-			}
-
-			if (isset($this->request->get['page'])) {
-				$url .= '&page=' . $this->request->get['page'];
-			}
-
-			$this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
-		}
-
-		$this->getForm();
-	}
-
-	public function edit() {
-		$this->load->language('catalog/category');
-
-		$this->document->setTitle($this->language->get('heading_title'));
-
-		$this->load->model('catalog/category');
-
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_category->editCategory($this->request->get['category_id'], $this->request->post);
-
-			$this->session->data['success'] = $this->language->get('text_success');
-
-			$url = '';
-
-			if (isset($this->request->get['sort'])) {
-				$url .= '&sort=' . $this->request->get['sort'];
-			}
-
-			if (isset($this->request->get['order'])) {
-				$url .= '&order=' . $this->request->get['order'];
-			}
-
-			if (isset($this->request->get['page'])) {
-				$url .= '&page=' . $this->request->get['page'];
-			}
-
-			$this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
-		}
-
-		$this->getForm();
-	}
-
-	public function delete() {
-		$this->load->language('catalog/category');
-
-		$this->document->setTitle($this->language->get('heading_title'));
-
-		$this->load->model('catalog/category');
-
-		if (isset($this->request->post['selected']) && $this->validateDelete()) {
-			foreach ($this->request->post['selected'] as $category_id) {
-				$this->model_catalog_category->deleteCategory($category_id);
-			}
-
-			$this->session->data['success'] = $this->language->get('text_success');
-
-			$url = '';
-
-			if (isset($this->request->get['sort'])) {
-				$url .= '&sort=' . $this->request->get['sort'];
-			}
-
-			if (isset($this->request->get['order'])) {
-				$url .= '&order=' . $this->request->get['order'];
-			}
-
-			if (isset($this->request->get['page'])) {
-				$url .= '&page=' . $this->request->get['page'];
-			}
-
-			$this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
-		}
+                foreach ($url as $value) {
+                    $result=$this->curl_post($value, $data);
+                  }
+          }  
+             $this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'], true));
+        }
 
 		$this->getList();
 	}
 
-	public function repair() {
+ 
+    
+    
+  function curl_post($url, $data) 
+  {
+    if (empty($url)) return false;
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch ,CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch ,CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 120);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    return $result;
+  }   
+    
+    
+  	public function upload() {
 		$this->load->language('catalog/category');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/category');
 
-		if ($this->validateRepair()) {
-			$this->model_catalog_category->repairCategories();
+		if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
 
-			$this->session->data['success'] = $this->language->get('text_success');
-
-			$url = '';
-
-			if (isset($this->request->get['sort'])) {
-				$url .= '&sort=' . $this->request->get['sort'];
+			if (isset($this->request->post['yupoourl'])) {
+                $url=$this->request->post['yupoourl'];
+                $html = file_get_contents($url);
+                preg_match_all('/<span id="albumtitle" class="albumOwner">(.*?)</s',$html,$matchs);
+                $productname=$matchs[1][0];
+                $productname =trim($productname);
+                preg_match_all('/<table class="DayView">(.*?)<\/table/s',$html,$imgmatchs);
+               
+                $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/"; 
+                preg_match_all($pattern,$imgmatchs[1][0],$imagearrays);
+                
+                $images=$imagearrays[1];
+                $data['images']=$images;
+                $data['product_name']= $productname;
+               // var_dump($data);
+                
 			}
 
-			if (isset($this->request->get['order'])) {
-				$url .= '&order=' . $this->request->get['order'];
-			}
 
-			if (isset($this->request->get['page'])) {
-				$url .= '&page=' . $this->request->get['page'];
-			}
-
-			$this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
+			//$this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
 		}
 
 		$this->getList();
-	}
+	}  
+    
+    
+    
+    
+function getsize($productsname) {    
+
+     if(stripos($productsname,'36-44')||stripos($productsname,'36--44')||stripos($productsname,'36---44')||stripos($productsname,'36―44')||stripos($productsname,'36――44')||stripos($productsname,'36―――44')){
+      $Size='36|||37|||38|||39|||40|||41|||42|||43|||44';
+     }elseif(stripos($productsname,'36-39')||stripos($productsname,'36--39')||stripos($productsname,'36---39')||stripos($productsname,'36―39')||stripos($productsname,'36――39')||stripos($productsname,'36―――39')){
+       $Size='36|||37|||38|||39';
+     }elseif(stripos($productsname,'31-37')){
+       $Size='31|||32|||33|||34|||35|||36|||37';
+     }elseif(stripos($productsname,'24-37')){
+       $Size='24|||25|||26|||27|||28|||29|||30|||31|||32|||33|||34|||35|||36|||37';
+     }elseif(stripos($productsname,'23-36')){
+       $Size='23|||24|||25|||26|||27|||28|||29|||30|||31|||32|||33|||34|||35|||36';
+     }elseif(stripos($productsname,'25-37')){
+       $Size='25|||26|||27|||28|||29|||30|||31|||32|||33|||34|||35|||36|||37';
+     }elseif(stripos($productsname,'26-35')){
+       $Size='26|||27|||28|||29|||30|||31|||32|||33|||34|||35';
+     }elseif(stripos($productsname,'39-45')){
+       $Size='39|||40|||41|||42|||43|||44|||45';
+     }elseif(stripos($productsname,'24-30.5')){
+       $Size='24|||25|||26|||27|||28|||29|||30.5';
+     }elseif(stripos($productsname,'31-37')){
+       $Size='31|||32|||33|||34|||35|||36|||37';
+     }elseif(stripos($productsname,'27-35')){
+       $Size='27|||28|||29|||30|||31|||32|||33|||34|||35';
+     }elseif(stripos($productsname,'28-35')){
+       $Size='28|||29|||30|||31|||32|||33|||34|||35';
+     }elseif(stripos($productsname,'35-39')||stripos($productsname,'35--39')||stripos($productsname,'35---39')){
+       $Size='35|||36|||37|||38|||39';
+     }elseif(stripos($productsname,'40-44')||stripos($productsname,'40--44')||stripos($productsname,'40---44')){
+       $Size='40|||41|||42|||43|||44';
+     }elseif(stripos($productsname,'39-44')||stripos($productsname,'39--44')||stripos($productsname,'39---44')){
+       $Size='39|||40|||41|||42|||43|||44';
+     }elseif(stripos($productsname,'40-45')||stripos($productsname,'40--45')||stripos($productsname,'40---45')){
+       $Size='40|||41|||42|||43|||44|||45';
+     }elseif(stripos($productsname,'40-46')||stripos($productsname,'40--46')||stripos($productsname,'40---46')||stripos($productsname,'40#-46')){
+       $Size='40|||41|||42|||43|||44|||45|||46';
+     }elseif(stripos($productsname,'40-47')||stripos($productsname,'40--47')||stripos($productsname,'40---47')||stripos($productsname,'40#-47')){
+       $Size='40|||41|||42|||43|||44|||45|||46|||47';
+     }elseif(stripos($productsname,'41-47')||stripos($productsname,'41--47')||stripos($productsname,'41---47')||stripos($productsname,'41#-47')){
+       $Size='41|||42|||43|||44|||45|||46|||47';
+     }elseif(stripos($productsname,'36-40')||stripos($productsname,'36--40')||stripos($productsname,'36---40')||stripos($productsname,'36#--40')){
+       $Size='36|||37|||38|||39|||40';
+     }elseif(stripos($productsname,'41-44')||stripos($productsname,'41--44')||stripos($productsname,'41---44')){
+       $Size='41|||42|||43|||44';
+     }elseif(stripos($productsname,'36-45')||stripos($productsname,'36--45')||stripos($productsname,'36---45')||stripos($productsname,'36#--40')){
+       $Size='36|||37|||38|||39|||40|||41|||42|||43|||44|||45';
+     }elseif(stripos($productsname,'36-46')||stripos($productsname,'36--46')||stripos($productsname,'36---46')){
+       $Size='36|||37|||38|||39|||40|||41|||42|||43|||44|||45|||46';
+     }elseif(stripos($productsname,'36-47')||stripos($productsname,'36--47')||stripos($productsname,'36---47')){
+       $Size='36|||37|||38|||39|||40|||41|||42|||43|||44|||45|||46|||47';
+     }elseif(stripos($productsname,'37-39')||stripos($productsname,'37--39')||stripos($productsname,'37---39')){
+       $Size='37|||38|||39';
+     }elseif(stripos($productsname,'男女鞋')||stripos($productsname,'情侣鞋')){
+       $Size='36|||37|||38|||39|||40|||41|||42|||43|||44';
+     }elseif(stripos($productsname,'男鞋')){
+       $Size='41|||42|||43|||44';
+     }elseif(stripos($productsname,'女鞋')){
+       $Size='36|||37|||38|||39';
+     }elseif(stripos($productsname,'女')){
+       $Size='36|||37|||38|||39';
+     }elseif(stripos($productsname,'男')){
+       $Size='41|||42|||43|||44';
+     }else{
+      //$Size="xxxx";
+     }
+
+  return $Size;
+
+}
+    
+    
+    
+    
+    
+    
+    
 
 	protected function getList() {
+        
+        
+     if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
+
+			if (isset($this->request->post['yupoourl'])) {
+                $url=$this->request->post['yupoourl'];
+                
+                
+                $html = file_get_contents($url);
+                $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/"; 
+                preg_match_all('/<span id="albumtitle" class="albumOwner">(.*?)</s',$html,$matchs);
+                $productname=$matchs[1][0];
+                $productname =trim($productname);
+                
+                
+                preg_match_all('/<div class="albumCoverThumb">(.*?)<\/div/s',$html,$mainimage);
+                preg_match_all($pattern,$mainimage[1][0],$mainimg);
+                
+                $mainimageurl=str_replace("thumb.jpg","big.jpg",$mainimg[1][0]);
+                 
+                
+                preg_match_all('/<table class="DayView">(.*?)<\/table/s',$html,$imgmatchs);
+                preg_match_all($pattern,$imgmatchs[1][0],$imagearrays);
+                $images=$imagearrays[1];
+                
+                
+                
+                
+                $data['image_dir']= date("Ym").'/'.date("d");
+                $data['images']=implode('|||',$images);
+                $data['images']=$mainimageurl.'|||'.$data['images'];
+                
+               
+                
+                $data['product_name']= $productname;
+                $data['size']=$this->getsize($productname);
+
+                $data['topcategories']=$this->model_catalog_product->getTopcategories();
+                $data['token']=$this->session->data['token'];
+               
+                
+                $productnum=$this->model_catalog_product->getProductNum();
+                $data['products_date_added'] = date('Y-m-d');
+                if($productnum[0]['products_date_added']!=$data['products_date_added']){
+                     $data['products_number']=0;
+                     $this->model_catalog_product->updateProductNum($data);
+                     $imgcount=0;
+                }else{
+                    $imgcount=$productnum[0]['products_number'];
+                    $data['model']='16'.date("md").$imgcount;
+                    $data['products_number']=$imgcount+1;
+                    $this->model_catalog_product->updateProductNum($data);
+                }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+			}
+
+
+			//$this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
+		}
+        
+        
+
+        $data['add'] = $this->url->link('catalog/category/add', 'token=' . $this->session->data['token'], true);
+        
+        
+        
+        
+        
+        
+        
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
 		} else {
@@ -187,7 +370,7 @@ class ControllerCatalogCategory extends Controller {
 			'href' => $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true)
 		);
 
-		$data['add'] = $this->url->link('catalog/category/add', 'token=' . $this->session->data['token'] . $url, true);
+
 		$data['delete'] = $this->url->link('catalog/category/delete', 'token=' . $this->session->data['token'] . $url, true);
 		$data['repair'] = $this->url->link('catalog/category/repair', 'token=' . $this->session->data['token'] . $url, true);
 
@@ -199,20 +382,6 @@ class ControllerCatalogCategory extends Controller {
 			'start' => ($page - 1) * $this->config->get('config_limit_admin'),
 			'limit' => $this->config->get('config_limit_admin')
 		);
-
-		$category_total = $this->model_catalog_category->getTotalCategories();
-
-		$results = $this->model_catalog_category->getCategories($filter_data);
-
-		foreach ($results as $result) {
-			$data['categories'][] = array(
-				'category_id' => $result['category_id'],
-				'name'        => $result['name'],
-				'sort_order'  => $result['sort_order'],
-				'edit'        => $this->url->link('catalog/category/edit', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, true),
-				'delete'      => $this->url->link('catalog/category/delete', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, true)
-			);
-		}
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
@@ -274,16 +443,7 @@ class ControllerCatalogCategory extends Controller {
 			$url .= '&order=' . $this->request->get['order'];
 		}
 
-		$pagination = new Pagination();
-		$pagination->total = $category_total;
-		$pagination->page = $page;
-		$pagination->limit = $this->config->get('config_limit_admin');
-		$pagination->url = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
-
-		$data['pagination'] = $pagination->render();
-
-		$data['results'] = sprintf($this->language->get('text_pagination'), ($category_total) ? (($page - 1) * $this->config->get('config_limit_admin')) + 1 : 0, ((($page - 1) * $this->config->get('config_limit_admin')) > ($category_total - $this->config->get('config_limit_admin'))) ? $category_total : ((($page - 1) * $this->config->get('config_limit_admin')) + $this->config->get('config_limit_admin')), $category_total, ceil($category_total / $this->config->get('config_limit_admin')));
-
+		
 		$data['sort'] = $sort;
 		$data['order'] = $order;
 
@@ -294,352 +454,6 @@ class ControllerCatalogCategory extends Controller {
 		$this->response->setOutput($this->load->view('catalog/category_list', $data));
 	}
 
-	protected function getForm() {
-		$data['heading_title'] = $this->language->get('heading_title');
-
-		$data['text_form'] = !isset($this->request->get['category_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
-		$data['text_none'] = $this->language->get('text_none');
-		$data['text_default'] = $this->language->get('text_default');
-		$data['text_enabled'] = $this->language->get('text_enabled');
-		$data['text_disabled'] = $this->language->get('text_disabled');
-
-		$data['entry_name'] = $this->language->get('entry_name');
-		$data['entry_description'] = $this->language->get('entry_description');
-		$data['entry_meta_title'] = $this->language->get('entry_meta_title');
-		$data['entry_meta_description'] = $this->language->get('entry_meta_description');
-		$data['entry_meta_keyword'] = $this->language->get('entry_meta_keyword');
-		$data['entry_keyword'] = $this->language->get('entry_keyword');
-		$data['entry_parent'] = $this->language->get('entry_parent');
-		$data['entry_filter'] = $this->language->get('entry_filter');
-		$data['entry_store'] = $this->language->get('entry_store');
-		$data['entry_image'] = $this->language->get('entry_image');
-		$data['entry_top'] = $this->language->get('entry_top');
-		$data['entry_column'] = $this->language->get('entry_column');
-		$data['entry_sort_order'] = $this->language->get('entry_sort_order');
-		$data['entry_status'] = $this->language->get('entry_status');
-		$data['entry_layout'] = $this->language->get('entry_layout');
-
-		$data['help_filter'] = $this->language->get('help_filter');
-		$data['help_keyword'] = $this->language->get('help_keyword');
-		$data['help_top'] = $this->language->get('help_top');
-		$data['help_column'] = $this->language->get('help_column');
-
-		$data['button_save'] = $this->language->get('button_save');
-		$data['button_cancel'] = $this->language->get('button_cancel');
-
-		$data['tab_general'] = $this->language->get('tab_general');
-		$data['tab_data'] = $this->language->get('tab_data');
-		$data['tab_design'] = $this->language->get('tab_design');
-
-		if (isset($this->error['warning'])) {
-			$data['error_warning'] = $this->error['warning'];
-		} else {
-			$data['error_warning'] = '';
-		}
-
-		if (isset($this->error['name'])) {
-			$data['error_name'] = $this->error['name'];
-		} else {
-			$data['error_name'] = array();
-		}
-
-		if (isset($this->error['meta_title'])) {
-			$data['error_meta_title'] = $this->error['meta_title'];
-		} else {
-			$data['error_meta_title'] = array();
-		}
-
-		if (isset($this->error['keyword'])) {
-			$data['error_keyword'] = $this->error['keyword'];
-		} else {
-			$data['error_keyword'] = '';
-		}
-
-		if (isset($this->error['parent'])) {
-			$data['error_parent'] = $this->error['parent'];
-		} else {
-			$data['error_parent'] = '';
-		}
-		
-		$url = '';
-
-		if (isset($this->request->get['sort'])) {
-			$url .= '&sort=' . $this->request->get['sort'];
-		}
-
-		if (isset($this->request->get['order'])) {
-			$url .= '&order=' . $this->request->get['order'];
-		}
-
-		if (isset($this->request->get['page'])) {
-			$url .= '&page=' . $this->request->get['page'];
-		}
-
-		$data['breadcrumbs'] = array();
-
-		$data['breadcrumbs'][] = array(
-			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true)
-		);
-
-		$data['breadcrumbs'][] = array(
-			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true)
-		);
-
-		if (!isset($this->request->get['category_id'])) {
-			$data['action'] = $this->url->link('catalog/category/add', 'token=' . $this->session->data['token'] . $url, true);
-		} else {
-			$data['action'] = $this->url->link('catalog/category/edit', 'token=' . $this->session->data['token'] . '&category_id=' . $this->request->get['category_id'] . $url, true);
-		}
-
-		$data['cancel'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true);
-
-		if (isset($this->request->get['category_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
-			$category_info = $this->model_catalog_category->getCategory($this->request->get['category_id']);
-		}
-
-		$data['token'] = $this->session->data['token'];
-
-		$this->load->model('localisation/language');
-
-		$data['languages'] = $this->model_localisation_language->getLanguages();
-
-		if (isset($this->request->post['category_description'])) {
-			$data['category_description'] = $this->request->post['category_description'];
-		} elseif (isset($this->request->get['category_id'])) {
-			$data['category_description'] = $this->model_catalog_category->getCategoryDescriptions($this->request->get['category_id']);
-		} else {
-			$data['category_description'] = array();
-		}
-
-		if (isset($this->request->post['path'])) {
-			$data['path'] = $this->request->post['path'];
-		} elseif (!empty($category_info)) {
-			$data['path'] = $category_info['path'];
-		} else {
-			$data['path'] = '';
-		}
-
-		if (isset($this->request->post['parent_id'])) {
-			$data['parent_id'] = $this->request->post['parent_id'];
-		} elseif (!empty($category_info)) {
-			$data['parent_id'] = $category_info['parent_id'];
-		} else {
-			$data['parent_id'] = 0;
-		}
-
-		$this->load->model('catalog/filter');
-
-		if (isset($this->request->post['category_filter'])) {
-			$filters = $this->request->post['category_filter'];
-		} elseif (isset($this->request->get['category_id'])) {
-			$filters = $this->model_catalog_category->getCategoryFilters($this->request->get['category_id']);
-		} else {
-			$filters = array();
-		}
-
-		$data['category_filters'] = array();
-
-		foreach ($filters as $filter_id) {
-			$filter_info = $this->model_catalog_filter->getFilter($filter_id);
-
-			if ($filter_info) {
-				$data['category_filters'][] = array(
-					'filter_id' => $filter_info['filter_id'],
-					'name'      => $filter_info['group'] . ' &gt; ' . $filter_info['name']
-				);
-			}
-		}
-
-		$this->load->model('setting/store');
-
-		$data['stores'] = $this->model_setting_store->getStores();
-
-		if (isset($this->request->post['category_store'])) {
-			$data['category_store'] = $this->request->post['category_store'];
-		} elseif (isset($this->request->get['category_id'])) {
-			$data['category_store'] = $this->model_catalog_category->getCategoryStores($this->request->get['category_id']);
-		} else {
-			$data['category_store'] = array(0);
-		}
-
-		if (isset($this->request->post['keyword'])) {
-			$data['keyword'] = $this->request->post['keyword'];
-		} elseif (!empty($category_info)) {
-			$data['keyword'] = $category_info['keyword'];
-		} else {
-			$data['keyword'] = '';
-		}
-
-		if (isset($this->request->post['image'])) {
-			$data['image'] = $this->request->post['image'];
-		} elseif (!empty($category_info)) {
-			$data['image'] = $category_info['image'];
-		} else {
-			$data['image'] = '';
-		}
-
-		$this->load->model('tool/image');
-
-		if (isset($this->request->post['image']) && is_file(DIR_IMAGE . $this->request->post['image'])) {
-			$data['thumb'] = $this->model_tool_image->resize($this->request->post['image'], 100, 100);
-		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['image'])) {
-			$data['thumb'] = $this->model_tool_image->resize($category_info['image'], 100, 100);
-		} else {
-			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
-		}
-
-		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
-
-		if (isset($this->request->post['top'])) {
-			$data['top'] = $this->request->post['top'];
-		} elseif (!empty($category_info)) {
-			$data['top'] = $category_info['top'];
-		} else {
-			$data['top'] = 0;
-		}
-
-		if (isset($this->request->post['column'])) {
-			$data['column'] = $this->request->post['column'];
-		} elseif (!empty($category_info)) {
-			$data['column'] = $category_info['column'];
-		} else {
-			$data['column'] = 1;
-		}
-
-		if (isset($this->request->post['sort_order'])) {
-			$data['sort_order'] = $this->request->post['sort_order'];
-		} elseif (!empty($category_info)) {
-			$data['sort_order'] = $category_info['sort_order'];
-		} else {
-			$data['sort_order'] = 0;
-		}
-
-		if (isset($this->request->post['status'])) {
-			$data['status'] = $this->request->post['status'];
-		} elseif (!empty($category_info)) {
-			$data['status'] = $category_info['status'];
-		} else {
-			$data['status'] = true;
-		}
-
-		if (isset($this->request->post['category_layout'])) {
-			$data['category_layout'] = $this->request->post['category_layout'];
-		} elseif (isset($this->request->get['category_id'])) {
-			$data['category_layout'] = $this->model_catalog_category->getCategoryLayouts($this->request->get['category_id']);
-		} else {
-			$data['category_layout'] = array();
-		}
-
-		$this->load->model('design/layout');
-
-		$data['layouts'] = $this->model_design_layout->getLayouts();
-
-		$data['header'] = $this->load->controller('common/header');
-		$data['column_left'] = $this->load->controller('common/column_left');
-		$data['footer'] = $this->load->controller('common/footer');
-
-		$this->response->setOutput($this->load->view('catalog/category_form', $data));
-	}
-
-	protected function validateForm() {
-		if (!$this->user->hasPermission('modify', 'catalog/category')) {
-			$this->error['warning'] = $this->language->get('error_permission');
-		}
-
-		foreach ($this->request->post['category_description'] as $language_id => $value) {
-			if ((utf8_strlen($value['name']) < 2) || (utf8_strlen($value['name']) > 255)) {
-				$this->error['name'][$language_id] = $this->language->get('error_name');
-			}
-
-			if ((utf8_strlen($value['meta_title']) < 3) || (utf8_strlen($value['meta_title']) > 255)) {
-				$this->error['meta_title'][$language_id] = $this->language->get('error_meta_title');
-			}
-		}
-
-		if (isset($this->request->get['category_id']) && $this->request->post['parent_id']) {
-			$results = $this->model_catalog_category->getCategoryPath($this->request->post['parent_id']);
-			
-			foreach ($results as $result) {
-				if ($result['path_id'] == $this->request->get['category_id']) {
-					$this->error['parent'] = $this->language->get('error_parent');
-					
-					break;
-				}
-			}
-		}
-
-		if (utf8_strlen($this->request->post['keyword']) > 0) {
-			$this->load->model('catalog/url_alias');
-
-			$url_alias_info = $this->model_catalog_url_alias->getUrlAlias($this->request->post['keyword']);
-
-			if ($url_alias_info && isset($this->request->get['category_id']) && $url_alias_info['query'] != 'category_id=' . $this->request->get['category_id']) {
-				$this->error['keyword'] = sprintf($this->language->get('error_keyword'));
-			}
-
-			if ($url_alias_info && !isset($this->request->get['category_id'])) {
-				$this->error['keyword'] = sprintf($this->language->get('error_keyword'));
-			}
-		}
-		
-		if ($this->error && !isset($this->error['warning'])) {
-			$this->error['warning'] = $this->language->get('error_warning');
-		}
-		
-		return !$this->error;
-	}
-
-	protected function validateDelete() {
-		if (!$this->user->hasPermission('modify', 'catalog/category')) {
-			$this->error['warning'] = $this->language->get('error_permission');
-		}
-
-		return !$this->error;
-	}
-
-	protected function validateRepair() {
-		if (!$this->user->hasPermission('modify', 'catalog/category')) {
-			$this->error['warning'] = $this->language->get('error_permission');
-		}
-
-		return !$this->error;
-	}
-
-	public function autocomplete() {
-		$json = array();
-
-		if (isset($this->request->get['filter_name'])) {
-			$this->load->model('catalog/category');
-
-			$filter_data = array(
-				'filter_name' => $this->request->get['filter_name'],
-				'sort'        => 'name',
-				'order'       => 'ASC',
-				'start'       => 0,
-				'limit'       => 5
-			);
-
-			$results = $this->model_catalog_category->getCategories($filter_data);
-
-			foreach ($results as $result) {
-				$json[] = array(
-					'category_id' => $result['category_id'],
-					'name'        => strip_tags(html_entity_decode($result['name'], ENT_QUOTES, 'UTF-8'))
-				);
-			}
-		}
-
-		$sort_order = array();
-
-		foreach ($json as $key => $value) {
-			$sort_order[$key] = $value['name'];
-		}
-
-		array_multisort($sort_order, SORT_ASC, $json);
-
-		$this->response->addHeader('Content-Type: application/json');
-		$this->response->setOutput(json_encode($json));
-	}
+    
+    
 }
