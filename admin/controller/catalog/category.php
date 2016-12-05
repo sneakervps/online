@@ -145,6 +145,8 @@ class ControllerCatalogCategory extends Controller {
 			if (isset($this->request->post['yupoourl'])) {
                 $url=$this->request->post['yupoourl'];
                 $html = file_get_contents($url);
+                
+                /*********产品名称*********/
                 preg_match_all('/<span id="albumtitle" class="albumOwner">(.*?)</s',$html,$matchs);
                 $productname=$matchs[1][0];
                 $productname =trim($productname);
@@ -152,6 +154,9 @@ class ControllerCatalogCategory extends Controller {
                
                 $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/"; 
                 preg_match_all($pattern,$imgmatchs[1][0],$imagearrays);
+                
+
+                
                 
                 $images=$imagearrays[1];
                 $data['images']=$images;
@@ -258,20 +263,33 @@ function getsize($productsname) {
                 
                 $html = file_get_contents($url);
                 $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/"; 
+                
+                
+                /*******bof产品名称********/
                 preg_match_all('/<span id="albumtitle" class="albumOwner">(.*?)</s',$html,$matchs);
                 $productname=$matchs[1][0];
                 $productname =trim($productname);
+                /*******eof产品名称********/
                 
                 
+                /*******bof主图********/
                 preg_match_all('/<div class="albumCoverThumb">(.*?)<\/div/s',$html,$mainimage);
                 preg_match_all($pattern,$mainimage[1][0],$mainimg);
                 
                 $mainimageurl=str_replace("thumb.jpg","big.jpg",$mainimg[1][0]);
-                 
+                 /*******eof主图********/
                 
+                /*******bof细节图********/
                 preg_match_all('/<table class="DayView">(.*?)<\/table/s',$html,$imgmatchs);
+
+                if(!isset($imgmatchs[1][0])){
+                	preg_match_all('/<table class="LayoutTop"(.*?)<\/table/s',$html,$imgmatchs);
+                }
+
+
                 preg_match_all($pattern,$imgmatchs[1][0],$imagearrays);
                 $images=$imagearrays[1];
+                /*******bof细节图********/
                 
                 
                 
@@ -279,6 +297,7 @@ function getsize($productsname) {
                 $data['image_dir']= date("Ym").'/'.date("d");
                 $data['images']=implode('|||',$images);
                 $data['images']=$mainimageurl.'|||'.$data['images'];
+                $data['images']=str_replace("small.jpg","big.jpg",$data['images']);
                 
                
                 

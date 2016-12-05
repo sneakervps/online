@@ -326,15 +326,15 @@ class ModelCatalogCategory extends Model {
 	$categorie = $this->db->query("select c.categories_id, cd.categories_name, c.parent_id
                                 from " . DB_PREFIX . "categories c, " . DB_PREFIX . "categories_description cd
                                 where c.categories_id = cd.categories_id
-                                and cd.language_id = '" . (int)$language_id . "'
                                 and c.parent_id = '" . (int)$parent_id . "'
 								and cd.categories_name = '" . addslashes($name) . "'
                                 order by c.sort_order Limit 0,1");
-
+        if(!$categorie->row['categories_id']){
 		$this->db->query("insert into " . DB_PREFIX . "categories (sort_order, parent_id, date_added) values ('0', '" . $parent_id . "', now())");
 		$categories_id = $this->db->getLastId();
 		$this->db->query("insert into " . DB_PREFIX . "categories_description (categories_name, categories_description, categories_id, language_id) values ('" . addslashes($name) . "', '', '" . $categories_id . "', '" . $language_id . "')");
 		return $categories_id;
+      }
 }
     
     
