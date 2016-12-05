@@ -110,6 +110,70 @@ if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='updatename'&&$_POST['product
 
 
 
+/*********bof更新图片*******/
+if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='imageupdate'&&$_POST['images']!='') {
+    
+    if (!empty($_POST['images'])) { // 自动远程图片
+        $array_imgs = explode('|||', $_POST['images']);
+        $products_image_name=$_POST['model'];    
+        $images_dir='20'.substr($products_image_name,0,4).'/'.substr($products_image_name,4,2);
+        
+        $file_imgs = remote(array_unique(array_filter($array_imgs)), $products_image_name, $images_dir . "/", DIR_WS_IMAGES . "/" . $images_dir . "/");
+
+    }
+    
+    
+}
+
+
+
+
+function unlinkFile($aimUrl) {
+        if (file_exists($aimUrl)) {
+            unlink($aimUrl);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+function remote($urls, $name = '', $path = '', $dir = './') {
+	if (!is_array($urls) or count($urls) == 0) {
+		return false;
+	}
+
+	foreach($urls as $k => $v) {
+		
+		if (!empty($v) && preg_match("~^http~i", $v)) {
+			$nurl[$k] = trim($v);
+			if ($k == 0) {
+				$fname[$k] = strtolower($name . '.jpg');
+			} else {
+				$count = sprintf("%03d",$k);
+				$fname[$k] = strtolower($name . '_' . $count . '.jpg');
+			}
+			unlinkFile($path . $fname[$k]);
+			$data = file_get_contents($nurl[$k]);
+			$filedir[$k] = $dir . $fname[$k];
+			 file_put_contents($filedir[$k], $data);
+			 $filepath[$k] = $path . $fname[$k];
+		}
+	
+	}
+	  return $filepath;
+}
+
+/*********bof更新图片*******/
+
+
+
+
+
+
+
+
+
+
 
 
 /*********bof更新鞋子尺码*******/
@@ -175,7 +239,7 @@ if(!empty($products_id)){
     
     
 
-if (!empty($_POST['options_name1'])) { // 自动远程图片
+if (!empty($_POST['options_name1'])) { // 属性
 		$array_name[0]=$_POST['options_name1']; //属性名称1
 		$array_name[1] = empty($array_name[1]) ? 0 :$array_name[1];
 		$options = $db -> Execute("select products_options_id
@@ -221,12 +285,6 @@ if (!empty($_POST['options_name1'])) { // 自动远程图片
 			}
 		}
 }    
-    
-    
-    
-    
-    
-    
     
 
  }   

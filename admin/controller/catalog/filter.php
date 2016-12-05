@@ -8,6 +8,8 @@ class ControllerCatalogFilter extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/filter');
+        
+        $this->load->model('catalog/image_rename');
 
 		$this->getList();
 	}
@@ -18,32 +20,65 @@ class ControllerCatalogFilter extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/filter');
+        $this->load->model('catalog/product');
+        $this->load->model('catalog/image_rename');
+        
 
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_filter->addFilter($this->request->post);
-
-			$this->session->data['success'] = $this->language->get('text_success');
-
-			$url = '';
-
-			if (isset($this->request->get['sort'])) {
-				$url .= '&sort=' . $this->request->get['sort'];
+            
+            
+		if ($this->request->server['REQUEST_METHOD'] == 'POST') {
+            
+            
+			if (isset($this->request->post['model'])) {
+				$imagedata['model'] = $this->request->post['model'];
 			}
 
-			if (isset($this->request->get['order'])) {
-				$url .= '&order=' . $this->request->get['order'];
+           if (isset($this->request->post['imageurl'])) {
+				$imagedata['imageurl'] = $this->request->post['imageurl'];
 			}
+            
+            /****************/
+            $productname=$this->model_catalog_image_rename->frename('images',$imagedata['model']);
+            
+            /****************/    
+             $key="Y4filUxH";
+             $imagedata['key']=$key;
+             $imagedata['postdate']='imageupdate'; 
+            
+            foreach($productname as $productimg){
+                $imagedata['images']=$productimg['image'];
+            }
+            
+             
+            
+            
+             /****************************/
+              $url[6]='http://www.sneakerjump.us/online.php';
+            /****************************/
 
-			if (isset($this->request->get['page'])) {
-				$url .= '&page=' . $this->request->get['page'];
-			}
+            
+                foreach ($url as $value) {
+                    $result=$this->model_catalog_image_rename->curl_post($value, $imagedata);
+                    if($result){
+                        $this->session->data['success'] = $this->language->get('text_success');
+                    }
+                  }
+            
+            
+            
 
-			$this->response->redirect($this->url->link('catalog/filter', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('catalog/filter', 'token=' . $this->session->data['token'], true));
 		}
 
-		$this->getForm();
+		$this->getList();
 	}
 
+    
+    
+
+    
+    
+    
 	public function edit() {
 		$this->load->language('catalog/filter');
 
@@ -111,6 +146,7 @@ class ControllerCatalogFilter extends Controller {
 	}
 
 	protected function getList() {
+        
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
 		} else {
