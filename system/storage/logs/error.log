@@ -2236,3 +2236,71 @@
 2016-12-06 3:34:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\controller\catalog\filter.php on line 56
 2016-12-06 3:34:52 - PHP Warning:  Invalid argument supplied for foreach() in D:\wamp\www\online\admin\controller\catalog\filter.php on line 56
 2016-12-06 3:44:21 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-06 4:44:14 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-06 4:44:14 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-06 4:44:15 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-06 4:44:16 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-06 4:44:16 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-06 4:44:21 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-06 4:44:57 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-06 4:44:59 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-06 4:44:59 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-06 4:45:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-06 4:45:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-06 4:50:15 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-06 4:50:15 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-06 4:50:18 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-06 4:50:18 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-06 6:02:55 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 6:02:55 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 6:02:55 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 173
+2016-12-06 6:02:55 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 189
+2016-12-06 6:02:56 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 6:02:56 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 6:02:56 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 173
+2016-12-06 6:02:56 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 189
+2016-12-06 6:04:00 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 6:04:00 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 6:04:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 173
+2016-12-06 6:04:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 189
+2016-12-06 6:04:59 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 6:04:59 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 6:04:59 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 173
+2016-12-06 6:04:59 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 189
+2016-12-06 6:49:12 - PHP Warning:  preg_match_all(): Unknown modifier '/' in D:\wamp\www\online\admin\controller\catalog\option.php on line 201
+2016-12-06 6:49:35 - PHP Warning:  preg_match_all(): No ending matching delimiter ')' found in D:\wamp\www\online\admin\controller\catalog\option.php on line 201
+2016-12-06 6:50:39 - PHP Warning:  preg_match_all(): Unknown modifier '&gt;' in D:\wamp\www\online\admin\controller\catalog\option.php on line 201
+2016-12-06 7:22:19 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:22:19 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:22:19 - PHP Notice:  Array to string conversion in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 132
+2016-12-06 7:23:58 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:23:58 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:27:22 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:27:22 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:28:40 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:28:40 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:30:59 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:30:59 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:38:34 - PHP Notice:  Undefined index: categories_id in D:\wamp\www\online\admin\model\catalog\category.php on line 332
+2016-12-06 7:39:07 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:39:07 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:39:07 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 171
+2016-12-06 7:39:07 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 187
+2016-12-06 7:39:24 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:39:24 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:39:58 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:39:58 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:39:58 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 171
+2016-12-06 7:39:58 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 187
+2016-12-06 7:44:54 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:44:54 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:44:54 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 171
+2016-12-06 7:44:54 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 187
+2016-12-06 7:45:51 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:45:51 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:46:25 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:46:25 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:46:25 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 171
+2016-12-06 7:46:25 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 187
+2016-12-06 7:46:35 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-06 7:46:35 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5

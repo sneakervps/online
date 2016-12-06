@@ -82,19 +82,7 @@ class ControllerCatalogCategory extends Controller {
                 }
               
               
-             // $url='http://www.sneakerjump.us/jk.php';
-              /****************************/
-             /* $url[1]='http://www.sneakeradd.me/jk.php';
-              $url[2]='http://www.sneakerbook.top/jk.php';
-              $url[4]='http://www.footwearlocker.cc/jk.php';
-              $url[5]='http://www.sneakerpage.ru/jk.php';
-              $url[6]='http://www.sneakerjump.us/jk.php';
-              $url[7]='http://www.sneakerfile.cc/jk.php';
-              $url[8]='http://www.stayfashion.ru/jk.php';
-              $url[9]='http://www.sneakerahead.ru/jk.php';
-              $url[10]='http://www.sneakersite.ru/jk.php';*/
-              
-              //$key="Y4filUxH";
+
                $url[1]='http://www.9201688.com/jk.php';
                //$url[2]='http://www.9201688.com/jk.php';
             /****************************/
@@ -133,44 +121,7 @@ class ControllerCatalogCategory extends Controller {
   }   
     
     
-  	public function upload() {
-		$this->load->language('catalog/category');
 
-		$this->document->setTitle($this->language->get('heading_title'));
-
-		$this->load->model('catalog/category');
-
-		if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
-
-			if (isset($this->request->post['yupoourl'])) {
-                $url=$this->request->post['yupoourl'];
-                $html = file_get_contents($url);
-                
-                /*********产品名称*********/
-                preg_match_all('/<span id="albumtitle" class="albumOwner">(.*?)</s',$html,$matchs);
-                $productname=$matchs[1][0];
-                $productname =trim($productname);
-                preg_match_all('/<table class="DayView">(.*?)<\/table/s',$html,$imgmatchs);
-               
-                $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/"; 
-                preg_match_all($pattern,$imgmatchs[1][0],$imagearrays);
-                
-
-                
-                
-                $images=$imagearrays[1];
-                $data['images']=$images;
-                $data['product_name']= $productname;
-               // var_dump($data);
-                
-			}
-
-
-			//$this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
-		}
-
-		$this->getList();
-	}  
     
     
     

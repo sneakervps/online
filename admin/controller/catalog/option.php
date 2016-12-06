@@ -8,42 +8,123 @@ class ControllerCatalogOption extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/option');
+        $this->load->model('catalog/category');
+        $this->load->model('catalog/product');
 
 		$this->getList();
 	}
 
 	public function add() {
-		$this->load->language('catalog/option');
+        
+        $this->load->model('catalog/category');
+        $this->load->model('catalog/product');
+        
+        if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
+            if (isset($this->request->post['model1'])) {
+			$data['model'] = $this->request->post['model1'];
+            }
+            
+            if (isset($this->request->post['name1'])) {
+			$data['title'] = $this->request->post['name1'];
+            }
+            
+            if (isset($this->request->post['imagedir1'])) {
+			$data['images_dir'] = $this->request->post['imagedir1'];
+            }
+            
+            if (isset($this->request->post['image1'])) {
+			$data['images'] = $this->request->post['image1'];
+            }        
+            
+            if (isset($this->request->post['price1'])) {
+			$data['price'] = $this->request->post['price1'];
+            }              
+             
+            if (isset($this->request->post['category1'])) {
+			$data['category'] = $this->request->post['category1'];
+            }  
+            
+            if (isset($this->request->post['optiona1'])) {
+			$data['options_name'] = $this->request->post['optiona1'];
+            }             
+           
+            
+            if (isset($this->request->post['valuea1'])) {
+			$data['options_size'] = $this->request->post['valuea1'];
+            }  
+            
+            if (isset($this->request->post['optionb1'])) {
+			$data['options_name1'] = $this->request->post['optionb1'];
+            }             
+  
+            if (isset($this->request->post['valueb1'])) {
+			$data['options_size1'] = $this->request->post['valueb1'];
+            }               
+            $data['quantity']='99';
+            
+          
+          if($data['category']!=''&&$data['model']!=''&&$data['title']!=''&&$data['images_dir']!=''&&$data['images']!=''&&$data['price']!=''){
+              
+              
+              setcookie("price", $data['price'] );
+              setcookie("category", $data['category']);
+              
+              
+              $cats = array_filter(explode('|||', $data['category']));
+              $language_id=2;   //语言id
+              $parent_id = 0;
+                foreach ($cats as $key => $value) {
+                    $parent_id=$this->model_catalog_category->create_category($value, $parent_id, $language_id);
+                }
+              
+              
 
-		$this->document->setTitle($this->language->get('heading_title'));
+               $url[1]='http://www.beyourjordans.ru/jk.php';
+               //$url[2]='http://www.9201688.com/jk.php';
+            /****************************/
 
-		$this->load->model('catalog/option');
-
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_option->addOption($this->request->post);
-
-			$this->session->data['success'] = $this->language->get('text_success');
-
-			$url = '';
-
-			if (isset($this->request->get['sort'])) {
-				$url .= '&sort=' . $this->request->get['sort'];
-			}
-
-			if (isset($this->request->get['order'])) {
-				$url .= '&order=' . $this->request->get['order'];
-			}
-
-			if (isset($this->request->get['page'])) {
-				$url .= '&page=' . $this->request->get['page'];
-			}
-
-			$this->response->redirect($this->url->link('catalog/option', 'token=' . $this->session->data['token'] . $url, true));
-		}
-
-		$this->getForm();
+                foreach ($url as $value) {
+                    $result=$this->curl_post($value, $data);
+                  }
+          }  
+             $this->response->redirect($this->url->link('catalog/option', 'token=' . $this->session->data['token'], true));
+        }
 	}
 
+    
+    
+    
+    
+    
+    
+    
+    function curl_post($url, $data) 
+  {
+    if (empty($url)) return false;
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch ,CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch ,CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 120);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    return $result;
+  }     
+    
+    
+    
+    
+    
+    
+    
+    
 	public function edit() {
 		$this->load->language('catalog/option');
 
@@ -111,6 +192,111 @@ class ControllerCatalogOption extends Controller {
 	}
 
 	protected function getList() {
+        
+        
+        
+        
+        
+       	   if (isset($this->request->post['beyourjordans'])) {
+                $url=$this->request->post['beyourjordans'];
+                
+                
+                $html = file_get_contents($url);
+               
+
+               
+               
+                $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/"; 
+                
+                
+                /*******bof产品名称********/
+                preg_match_all('/<span class="h1">(.*?)<\/span/s',$html,$matchs);
+                $productname=$matchs[1][0];
+                $productname =trim($productname);
+                $productname=str_replace(" from Beyourjordans.club","",$productname);
+                /*******eof产品名称********/
+                
+                
+                /*******bof主图********/
+                preg_match_all('/<img id="image-main"(.*?)</s',$html,$mainimage);
+                preg_match_all('/src="(.*?)"/s',$mainimage[1][0],$mainimg);
+                $mainimageurl=$mainimg[1][0];
+                 /*******eof主图********/
+                
+               
+               
+               
+                /*******bof细节图********/
+                preg_match_all('/class="gallery-image"(.*?)<\/div/s',$html,$imgmatchs);
+                preg_match_all('/src="(.*?)"/s',$imgmatchs[1][0],$imagearrays);
+               
+               $images=$imagearrays[1];
+                /*******bof细节图********/
+                
+               
+               /*******bof尺码********/
+               preg_match_all('/<select name="options(.*?)<\/select/s',$html,$sizematchs);
+               preg_match_all('/" >(.*?)<\/optio/s',$sizematchs[1][0],$sizearray);
+               $size=implode('|||',$sizearray[1]);
+               /*******bof尺码********/ 
+                
+               
+               
+                /*******bof价格********/
+                preg_match_all('/<span class="price">(.*?)</s',$html,$pricedate);
+                $price=str_replace("$","",$pricedate[1][0]);
+                $data['price']=$price;
+               
+               
+               
+                /*******eof价格********/
+               
+               
+               
+               
+               
+               
+               
+                
+                $data['image_dir']= date("Ym").'/'.date("d");
+                $data['images']=implode('|||',$images);
+                $data['images']=$mainimageurl.'|||'.$data['images'];
+                
+               
+
+                $data['product_name']= $productname;
+                $data['size']=$size;
+
+                $data['topcategories']=$this->model_catalog_product->getTopcategories();
+                $data['token']=$this->session->data['token'];
+               
+                
+                $productnum=$this->model_catalog_product->getProductNum();
+                $data['products_date_added'] = date('Y-m-d');
+                if($productnum[0]['products_date_added']!=$data['products_date_added']){
+                     $data['products_number']=0;
+                     $this->model_catalog_product->updateProductNum($data);
+                     $imgcount=0;
+                }else{
+                    $imgcount=$productnum[0]['products_number'];
+                    $data['model']='16'.date("md").$imgcount;
+                    $data['products_number']=$imgcount+1;
+                    $this->model_catalog_product->updateProductNum($data);
+                }
+                
+			}
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
 		} else {
