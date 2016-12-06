@@ -31,6 +31,29 @@ public function curl_post($url, $data)
     
     
     
+ public function dir_size($dir){
+     $dh = @opendir($dir);             //打开目录，返回一个目录流
+     $return = array();
+      $i = 0;
+          while($file = @readdir($dh)){     //循环读取目录下的文件
+             if($file!='.' and $file!='..'){
+              $path = $dir.'/'.$file;     //设置目录，用于含有子目录的情况
+              if(is_dir($path)){
+          }elseif(is_file($path)){
+              $filesize[] =  round((filesize($path)/1024),2);//获取文件大小
+              $filename[] = $path;//获取文件名称                     
+              $filetime[] = date("Y-m-d H:i:s",filemtime($path));//获取文件最近修改日期    
+   
+              $return[] =  $dir.'/'.$file;
+          }
+          }
+          }  
+          @closedir($dh);             //关闭目录流
+          //array_multisort($filesize,SORT_DESC,SORT_NUMERIC, $return);//按大小排序
+          array_multisort($filename,SORT_DESC,SORT_STRING, $files);//按名字排序
+          //array_multisort($filetime,SORT_DESC,SORT_STRING, $files);//按时间排序
+          return $return;               //返回文件
+     }   
     
     
     
@@ -38,8 +61,10 @@ public function curl_post($url, $data)
     
     
     
+public function frename($dirname,$imagename='',$imgnum='0'){
     
-public function frename($dirname,$imagename=''){
+    
+   $this->dir_size($dirname);
     
    $productnum=$this->model_catalog_product->getProductNum();
    $data['products_date_added'] = date('Y-m-d');
@@ -64,7 +89,7 @@ public function frename($dirname,$imagename=''){
            $curDir = $dirname.'/'.$fn;
            $fn = iconv('GB2312','UTF-8',$fn);
            $imgcount++;
-           $products=$this->imagerename($curDir,$imgcount,$imagename);
+           $products=$this->imagerename($curDir,$imgcount,$imagename,$imgnum);
            $this->unlinkDir($curDir);
            $product[$imgcount]['image']=$products['image'];
            $product[$imgcount]['image_dir']=$products['image_dir'];
@@ -138,11 +163,18 @@ public function unlinkFile($aimUrl) {
     
 
 
- public function imagerename($imagedirname,$imgcount,$imagename){
+ public function imagerename($imagedirname,$imgcount,$imagename,$imgnum){
     $image_url='';
     $addimage_url='';
     $handle = opendir($imagedirname);  
-    $i=0;
+    
+    if($imgnum){
+        $i=$imgnum;
+    }else{
+       $i=0; 
+       $imgnum=0;
+    }
+    
     while(($fn = readdir($handle))!==false){
         if($fn!='.'&&$fn!='..'){  
              $curDir = $imagedirname.'/'.$fn;
@@ -167,7 +199,7 @@ public function unlinkFile($aimUrl) {
             
             
             if($path['extension']=='jpg'||$path['extension']=='JPG'){
-                if($i==0){
+                if($i==$imgnum){
                   $this->createDir($pathname);
                   @$newname = $pathname.'/'.$products_image_name.'.jpg';
                   $image_url=$image_url.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg<br />';

@@ -37,19 +37,28 @@ class ControllerCatalogFilter extends Controller {
 				$imagedata['imageurl'] = $this->request->post['imageurl'];
 			}
             
+            
+           if (isset($this->request->post['imgnum'])) {
+				$imagedata['imgnum'] = $this->request->post['imgnum'];
+			}
+            
+            
             /****************/
-            $productname=$this->model_catalog_image_rename->frename('images',$imagedata['model']);
+            $productname=$this->model_catalog_image_rename->frename('images',$imagedata['model'],$imagedata['imgnum']);
             
             /****************/    
              $key="Y4filUxH";
              $imagedata['key']=$key;
              $imagedata['postdate']='imageupdate'; 
             
+            
+
             foreach($productname as $productimg){
                 $imagedata['images']=$productimg['image'];
             }
             
-             
+            
+
             
             
              /****************************/

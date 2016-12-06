@@ -44,9 +44,9 @@
                                                             <td class="text-center" style="width:200px;">
                                                                 <lable>型号:</lable>
                                                                 <input id="model" class="form-control" name="model" value="" type="text"> </td>
-                                                            <td class="text-center">
-                                                                <lable>图片链接:</lable>
-                                                                <input id="imageurl" class="form-control" name="imageurl" value="" type="text"> </td>
+                                                            <td style="width:100px;" class="text-center">
+                                                                <lable>图片开始id:</lable>
+                                                                <input id="imgnum" class="form-control" name="imgnum" value="" type="text"> </td>
                                                             <td class="text-right">
                                                                 <button type="submit" form="form-status" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button>
                                                             </td>

@@ -107,9 +107,12 @@ if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='updatename'&&$_POST['product
 
 
 
-
-
-
+/*
+$_POST['key']='Y4filUxH';
+$_POST['postdate']='imageupdate';
+$_POST['images']='http://online.sneakercon.biz/upload/201612/1612055/1612055.jpg|||http://online.sneakercon.biz/upload/201612/1612055/1612055_001.jpg|||http://online.sneakercon.biz/upload/201612/1612055/1612055_002.jpg|||http://online.sneakercon.biz/upload/201612/1612055/1612055_003.jpg';
+$_POST['model']='1612055';
+    */
 /*********bof更新图片*******/
 if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='imageupdate'&&$_POST['images']!='') {
     
@@ -119,6 +122,8 @@ if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='imageupdate'&&$_POST['images
         $images_dir='20'.substr($products_image_name,0,4).'/'.substr($products_image_name,4,2);
         
         $file_imgs = remote(array_unique(array_filter($array_imgs)), $products_image_name, $images_dir . "/", DIR_WS_IMAGES . "/" . $images_dir . "/");
+        
+        var_dump($file_imgs);
 
     }
     
@@ -137,11 +142,27 @@ function unlinkFile($aimUrl) {
         }
     }
 
+
+function deleteallimg($path,$name){
+    unlinkFile($path . $name . '.jpg');
+    for($i=0;$i<100;$i++){
+        $count = sprintf("%03d",$i);
+        $fname[$k] = strtolower($name . '_' . $count . '.jpg');
+        echo $path.$fname[$k];
+        unlinkFile('images/'.$path . $fname[$k]);
+        
+    }   
+}
+
+
+
 function remote($urls, $name = '', $path = '', $dir = './') {
 	if (!is_array($urls) or count($urls) == 0) {
 		return false;
 	}
 
+    deleteallimg($path,$name);
+    
 	foreach($urls as $k => $v) {
 		
 		if (!empty($v) && preg_match("~^http~i", $v)) {
@@ -152,7 +173,7 @@ function remote($urls, $name = '', $path = '', $dir = './') {
 				$count = sprintf("%03d",$k);
 				$fname[$k] = strtolower($name . '_' . $count . '.jpg');
 			}
-			unlinkFile($path . $fname[$k]);
+            
 			$data = file_get_contents($nurl[$k]);
 			$filedir[$k] = $dir . $fname[$k];
 			 file_put_contents($filedir[$k], $data);
@@ -160,6 +181,9 @@ function remote($urls, $name = '', $path = '', $dir = './') {
 		}
 	
 	}
+    
+    
+      
 	  return $filepath;
 }
 
