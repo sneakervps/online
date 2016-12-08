@@ -2304,3 +2304,241 @@
 2016-12-06 7:46:25 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 187
 2016-12-06 7:46:35 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
 2016-12-06 7:46:35 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-07 1:51:47 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 1:54:47 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:38:27 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:38:27 - PHP Notice:  Undefined variable: products in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 96
+2016-12-07 6:38:27 - PHP Notice:  Undefined variable: products in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 97
+2016-12-07 6:38:27 - PHP Notice:  Undefined variable: products in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 98
+2016-12-07 6:39:13 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:40:35 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:40:35 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 225
+2016-12-07 6:40:35 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 227
+2016-12-07 6:41:39 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:43:37 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:43:37 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 223
+2016-12-07 6:43:37 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 225
+2016-12-07 6:49:07 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:52:30 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:54:52 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:54:54 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:58:57 - PHP Notice:  Undefined variable: filename in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-07 6:58:57 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 55
+2016-12-07 7:19:17 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 1:49:14 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 1:49:14 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 1:49:14 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 171
+2016-12-08 1:49:14 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 187
+2016-12-08 1:51:06 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 1:51:06 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 1:51:06 - PHP Notice:  Undefined variable: model in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 126
+2016-12-08 1:59:39 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 1:59:39 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 2:01:23 - PHP Notice:  Undefined index: categories_id in D:\wamp\www\online\admin\model\catalog\category.php on line 332
+2016-12-08 2:01:23 - PHP Notice:  Undefined index: categories_id in D:\wamp\www\online\admin\model\catalog\category.php on line 332
+2016-12-08 2:01:57 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 2:01:57 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 2:01:57 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 171
+2016-12-08 2:01:57 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 187
+2016-12-08 2:29:53 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 2:29:53 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 2:29:53 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 171
+2016-12-08 2:29:53 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 187
+2016-12-08 2:36:29 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 2:36:29 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 2:36:29 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 173
+2016-12-08 2:36:29 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 189
+2016-12-08 2:36:33 - PHP Warning:  file_get_contents(): Filename cannot be empty in D:\wamp\www\online\admin\controller\catalog\option.php on line 202
+2016-12-08 2:36:33 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 208
+2016-12-08 2:36:33 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 216
+2016-12-08 2:36:33 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 217
+2016-12-08 2:36:33 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 222
+2016-12-08 2:36:33 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 230
+2016-12-08 2:36:33 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 238
+2016-12-08 2:53:43 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 322
+2016-12-08 2:54:35 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 332
+2016-12-08 2:54:35 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 333
+2016-12-08 2:54:35 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 338
+2016-12-08 2:54:35 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 346
+2016-12-08 2:54:35 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 2:54:35 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 3:08:08 - PHP Notice:  Undefined variable: pricedate in D:\wamp\www\online\admin\controller\catalog\option.php on line 328
+2016-12-08 3:35:51 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 3:35:51 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 3:35:51 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 173
+2016-12-08 3:35:51 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 189
+2016-12-08 3:43:25 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 3:43:25 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 3:43:25 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 173
+2016-12-08 3:43:25 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 189
+2016-12-08 4:14:30 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:14:30 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:14:30 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 173
+2016-12-08 4:14:30 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 189
+2016-12-08 4:14:32 - PHP Notice:  Undefined variable: curl_getcontent in D:\wamp\www\online\admin\controller\catalog\option.php on line 307
+2016-12-08 4:14:55 - PHP Notice:  Undefined variable: curl_getcontent in D:\wamp\www\online\admin\controller\catalog\option.php on line 307
+2016-12-08 4:24:31 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:24:31 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:27:41 - PHP Notice:  Undefined index: categories_id in D:\wamp\www\online\admin\model\catalog\category.php on line 332
+2016-12-08 4:28:22 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:28:22 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:28:22 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 173
+2016-12-08 4:28:22 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 189
+2016-12-08 4:34:22 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:34:22 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:34:22 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 175
+2016-12-08 4:34:22 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 191
+2016-12-08 4:35:17 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:35:17 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:36:00 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:36:00 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:36:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 175
+2016-12-08 4:36:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 191
+2016-12-08 4:36:38 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 4:36:38 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 6:12:28 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5 (1).jpg,images/5 (1).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5 (1).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:12:28 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5 (3).jpg,images/5 (3).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5 (3).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:12:28 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5 (4).jpg,images/5 (4).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5 (4).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:12:28 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5 (5).jpg,images/5 (5).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5 (5).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:12:28 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5.jpg,images/5.jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Warning:  opendir(images/5.jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:12:28 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:13:50 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5 (1).jpg,images/5 (1).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5 (1).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:13:50 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5 (3).jpg,images/5 (3).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5 (3).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:13:50 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5 (4).jpg,images/5 (4).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5 (4).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:13:50 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5 (5).jpg,images/5 (5).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5 (5).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:13:50 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5.jpg,images/5.jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Warning:  opendir(images/5.jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: image_url_main in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 219
+2016-12-08 6:13:50 - PHP Notice:  Undefined variable: products_image_name in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 221
+2016-12-08 6:15:03 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:15:03 - PHP Warning:  opendir(images/5 (1).jpg,images/5 (1).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:15:03 - PHP Warning:  opendir(images/5 (1).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:15:03 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 218
+2016-12-08 6:15:45 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:15:45 - PHP Warning:  opendir(images/5 (1).jpg,images/5 (1).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:15:45 - PHP Warning:  opendir(images/5 (1).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 170
+2016-12-08 6:15:45 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 218
+2016-12-08 6:17:16 - PHP Warning:  array_multisort(): Argument #1 is expected to be an array or a sort flag in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 53
+2016-12-08 6:17:16 - PHP Warning:  opendir(images/5 (1).jpg,images/5 (1).jpg):  in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 171
+2016-12-08 6:17:16 - PHP Warning:  opendir(images/5 (1).jpg): failed to open dir: No such file or directory in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 171
+2016-12-08 6:17:16 - PHP Notice:  Undefined variable: product in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 216
+2016-12-08 6:18:14 - PHP Notice:  Undefined index: image in D:\wamp\www\online\admin\model\catalog\image_rename.php on line 216
+2016-12-08 7:02:16 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:02:16 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:02:57 - PHP Notice:  Undefined index: categories_id in D:\wamp\www\online\admin\model\catalog\category.php on line 332
+2016-12-08 7:03:38 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:03:38 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:03:59 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:03:59 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:04:53 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:04:53 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:08:26 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:08:26 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:08:41 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:08:41 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:09:51 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:09:51 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:10:42 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:10:42 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:12:02 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:12:02 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:13:07 - PHP Warning:  file_get_contents(http://v.yupoo.com/photos/836666166/albums/44414881/): failed to open stream: HTTP request failed!  in D:\wamp\www\online\admin\controller\catalog\category.php on line 215
+2016-12-08 7:13:07 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\category.php on line 221
+2016-12-08 7:13:07 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\category.php on line 228
+2016-12-08 7:13:07 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\category.php on line 230
+2016-12-08 7:13:07 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\category.php on line 241
+2016-12-08 7:13:07 - PHP Notice:  Undefined variable: Size in D:\wamp\www\online\admin\controller\catalog\category.php on line 195
+2016-12-08 7:15:12 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:15:12 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:16:25 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:16:25 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:16:42 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:16:42 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:17:09 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:17:09 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:18:47 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:18:47 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:19:45 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:19:45 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:20:15 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:20:15 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:21:33 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:21:33 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:23:31 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:23:31 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:24:36 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:24:36 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:25:03 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:25:03 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:25:15 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:25:15 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:26:29 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:26:29 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:26:52 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:26:52 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:27:12 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:27:12 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:28:06 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:28:06 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:29:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:29:00 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:30:12 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:30:12 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:30:33 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:30:33 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:30:46 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:30:46 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:32:03 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 173
+2016-12-08 7:32:03 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\category_list.tpl on line 189
+2016-12-08 7:40:04 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 7:40:04 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 7:40:04 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 175
+2016-12-08 7:40:04 - PHP Notice:  Undefined variable: token in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 191
+2016-12-08 7:40:11 - PHP Warning:  preg_match_all(): No ending delimiter '/' found in D:\wamp\www\online\admin\controller\catalog\option.php on line 337
+2016-12-08 7:40:12 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 7:40:12 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 7:40:47 - PHP Warning:  preg_match_all(): No ending delimiter '/' found in D:\wamp\www\online\admin\controller\catalog\option.php on line 337
+2016-12-08 7:41:46 - PHP Warning:  preg_match_all(): No ending delimiter '/' found in D:\wamp\www\online\admin\controller\catalog\option.php on line 337
+2016-12-08 7:46:08 - PHP Warning:  preg_match_all(): Unknown modifier 'c' in D:\wamp\www\online\admin\controller\catalog\option.php on line 337
+2016-12-08 7:46:27 - PHP Warning:  preg_match_all(): No ending delimiter '/' found in D:\wamp\www\online\admin\controller\catalog\option.php on line 337
+2016-12-08 7:46:51 - PHP Notice:  Undefined offset: 0 in D:\wamp\www\online\admin\controller\catalog\option.php on line 338
+2016-12-08 7:51:12 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 7:51:12 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 7:51:36 - PHP Notice:  Undefined variable: repair in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5
+2016-12-08 7:51:36 - PHP Notice:  Undefined variable: button_rebuild in D:\wamp\www\online\admin\view\template\catalog\option_list.tpl on line 5

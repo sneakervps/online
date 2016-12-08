@@ -44,13 +44,13 @@ public function curl_post($url, $data)
               $filename[] = $path;//获取文件名称                     
               $filetime[] = date("Y-m-d H:i:s",filemtime($path));//获取文件最近修改日期    
    
-              $return[] =  $dir.'/'.$file;
+              $return[] = $file;
           }
           }
           }  
           @closedir($dh);             //关闭目录流
           //array_multisort($filesize,SORT_DESC,SORT_NUMERIC, $return);//按大小排序
-          array_multisort($filename,SORT_DESC,SORT_STRING, $files);//按名字排序
+          array_multisort($filename,SORT_ASC,SORT_STRING, $return);//按名字排序
           //array_multisort($filetime,SORT_DESC,SORT_STRING, $files);//按时间排序
           return $return;               //返回文件
      }   
@@ -64,7 +64,7 @@ public function curl_post($url, $data)
 public function frename($dirname,$imagename='',$imgnum='0'){
     
     
-   $this->dir_size($dirname);
+   
     
    $productnum=$this->model_catalog_product->getProductNum();
    $data['products_date_added'] = date('Y-m-d');
@@ -166,6 +166,7 @@ public function unlinkFile($aimUrl) {
  public function imagerename($imagedirname,$imgcount,$imagename,$imgnum){
     $image_url='';
     $addimage_url='';
+    $imagesfile=$this->dir_size($imagedirname);
     $handle = opendir($imagedirname);  
     
     if($imgnum){
@@ -175,51 +176,42 @@ public function unlinkFile($aimUrl) {
        $imgnum=0;
     }
     
-    while(($fn = readdir($handle))!==false){
-        if($fn!='.'&&$fn!='..'){  
-             $curDir = $imagedirname.'/'.$fn;
-             $count = sprintf("%03d",$i);
-             $path = pathinfo($curDir);
-            
-            
-            
-            if($imagename!=''){ //更新图片
-                $products_image_name=$imagename;
-                $pathname='../upload/'.date("Ym").'/'.$products_image_name;
-                
-                
+      
+     
+foreach($imagesfile as $key=>$value){
+        $curDir = $imagedirname.'/'.$value;
+        $count = sprintf("%03d",$i);
+        $path = pathinfo($curDir);
+        if($imagename!=''){ //更新图片
+             $products_image_name=$imagename;
+             $pathname='../upload/'.date("Ym").'/'.$products_image_name;
             }else{   //新产品图片
              $products_image_name=date("md");
              $products_image_name='16'.$products_image_name.$imgcount;
              $pathname='../upload/'.date("Ym").'/'.$products_image_name;
             }
-            
-            
-            
-            
-            
-            if($path['extension']=='jpg'||$path['extension']=='JPG'){
-                if($i==$imgnum){
-                  $this->createDir($pathname);
-                  @$newname = $pathname.'/'.$products_image_name.'.jpg';
-                  $image_url=$image_url.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg<br />';
-                  $image_url_main='http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg';
-                  $product[$imgcount]['image_name']= $products_image_name; 
-                  $product[$imgcount]['image_dir']= date("Ym").'/'.date("d"); 
-                }else{
-                  @$newname = $pathname.'/'.$products_image_name.'_'.$count.'.jpg';
-                  $addimage_url=$addimage_url.'|||'.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'_'.$count.'.jpg';
-                }
-
-                
-                //图片压缩成800,600
-                $this->resize($curDir,1000,800);
-                rename($curDir,$newname);   
-                $i++; 
+    
+         if($path['extension']=='jpg'||$path['extension']=='JPG'){
+            if($i==$imgnum){
+              $this->createDir($pathname);
+              @$newname = $pathname.'/'.$products_image_name.'.jpg';
+              $image_url=$image_url.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg<br />';
+              $image_url_main='http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg';
+              $product[$imgcount]['image_name']= $products_image_name; 
+              $product[$imgcount]['image_dir']= date("Ym").'/'.date("d"); 
+            }else{
+              @$newname = $pathname.'/'.$products_image_name.'_'.$count.'.jpg';
+              $addimage_url=$addimage_url.'|||'.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'_'.$count.'.jpg';
             }
+
+
+            //图片压缩成800,600
+            $this->resize($curDir,1000,800);
+            rename($curDir,$newname);   
+            $i++; 
         }
-        
-    }
+    
+} 
     $product['image']=$image_url_main.$addimage_url;
     $product['image_dir']=date("Ym").'/'.date("d");
     $product['model']=$products_image_name;

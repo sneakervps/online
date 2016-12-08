@@ -91,10 +91,25 @@ class ControllerCatalogRecurring extends Controller {
               $url[8]='http://www.sneakersite.ru/online.php';
               $url[9]='http://www.sneakerahead.ru/online.php';
             /****************************/
+  
+                $success='';
                 foreach ($url as $key=>$value) {
                     $result=$this->curl_post($value, $pricedata);
-                    if($result) echo $key;
+                    if($result){
+                       $success=$success.'|||'.$key;
+                    }
                   }
+            
+              $this->session->data['success'] = $success; 
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
             }
 
@@ -142,10 +157,22 @@ class ControllerCatalogRecurring extends Controller {
               $url[9]='http://www.sneakerahead.ru/online.php';
                 
             /****************************/
+                $success='';
                 foreach ($url as $key=>$value) {
                     $result=$this->curl_post($value, $productnamedata);
-                    if($result) echo $key;
+                    if($result){
+                       $success=$success.'|||'.$key;
+                    }
                   }
+            
+              $this->session->data['success'] = $success; 
+                
+                
+                
+                
+                
+                
+                
                 
             }
 
@@ -192,11 +219,22 @@ class ControllerCatalogRecurring extends Controller {
               $url[7]='http://www.stayfashion.ru/online.php';
               $url[8]='http://www.sneakersite.ru/online.php';
               $url[9]='http://www.sneakerahead.ru/online.php';
-            /****************************/
+            /****************************/  
+                $success='';
                 foreach ($url as $key=>$value) {
-                    $result=$this->curl_post($value, $statusdata);
-                    if($result) echo $key;
+                     $result=$this->curl_post($value, $statusdata);
+                    if($result){
+                       $success=$success.'|||'.$key;
+                    }
                   }
+            
+              $this->session->data['success'] = $success; 
+                
+                
+                
+                
+                
+                
                 
             }
             $this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
@@ -247,13 +285,24 @@ class ControllerCatalogRecurring extends Controller {
               $url[9]='http://www.sneakerahead.ru/online.php';
             
             /****************************/
+
+                $success='';
                 foreach ($url as $key=>$value) {
-                    $result=$this->curl_post($value, $westernuniondata);
-                    if($result) echo $key;
+                     $result=$this->curl_post($value, $westernuniondata);
+                    if($result){
+                       $success=$success.'|||'.$key;
+                    }
                   }
+            
+              $this->session->data['success'] = $success; 
+                
+                
+                
+                
+                
                 
             }
-           // $this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
+            $this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
 		}
 
 		//$this->getList();
@@ -306,10 +355,23 @@ class ControllerCatalogRecurring extends Controller {
               $url[8]='http://www.sneakersite.ru/online.php';
               $url[9]='http://www.sneakerahead.ru/online.php';
             /****************************/
+                
+              $success='';
                 foreach ($url as $key=>$value) {
-                    $result=$this->curl_post($value, $sizedata);
-                    if($result) echo $key;
+                     $result=$this->curl_post($value, $sizedata);
+                    if($result){
+                       $success=$success.'|||'.$key;
+                    }
                   }
+            
+              $this->session->data['success'] = $success; 
+                
+                
+                
+                
+                
+                
+                
                 
             }
 

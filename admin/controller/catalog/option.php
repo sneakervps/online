@@ -39,7 +39,8 @@ class ControllerCatalogOption extends Controller {
             if (isset($this->request->post['price1'])) {
 			$data['price'] = $this->request->post['price1'];
             }              
-             
+                          
+
             if (isset($this->request->post['category1'])) {
 			$data['category'] = $this->request->post['category1'];
             }  
@@ -55,7 +56,12 @@ class ControllerCatalogOption extends Controller {
             
             if (isset($this->request->post['optionb1'])) {
 			$data['options_name1'] = $this->request->post['optionb1'];
-            }             
+            }      
+            
+            if (isset($this->request->post['special'])) {
+			$data['sprice'] = $this->request->post['special'];
+            }  
+            
   
             if (isset($this->request->post['valueb1'])) {
 			$data['options_size1'] = $this->request->post['valueb1'];
@@ -120,7 +126,32 @@ class ControllerCatalogOption extends Controller {
     
     
     
-    
+function  curl_getcontent($url){
+        $curl = curl_init($url);
+        $header = array();
+        $header[] = 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8';
+        $header[] = 'Accept-Encoding: gzip, deflate, sdch';
+        $header[] = 'Accept-Language: en-US,en;q=0.8';
+        $header[] = 'Cache-Control: max-age=0';
+        $header[] = 'Connection: keep-alive';
+        $header[] = 'CLIENT-IP:108.162.219.199'; 
+        $header[] = 'X-FORWARDED-FOR:108.162.219.199';  
+        $header[] = 'Referer:http://www.perfectkickz.ru/index.htm';
+        $header[] = 'Cookie: Comm100_CC_Identity_219872=-106536; __cfduid=d04818789bafc8cbba6bbdc26c17be1d81480639902; Comm100_CC_Identity_219872=-106437; a2403_times=2; comm100_session_219872=-129200; comm100_guid2_219872=4ff024819d004a5eb32fbb26b61186d9; JSESSIONID=2A5CE583C7A582D15B2B3941C120EFA6; _ga=GA1.2.2009008181.1480639881; _gat=1';
+        $header[] = 'Connection: keep-alive';
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+        // 不输出header头信息
+        curl_setopt($curl, CURLOPT_HEADER, 0);
+        curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
+        // 伪装浏览器
+        curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36 OPR/41.0.2353.69');
+        // 保存到字符串而不是输出
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $html = curl_exec($curl);
+        curl_close($curl);
+        return $html;
+        //echo $rs;
+}   
     
     
     
@@ -197,15 +228,9 @@ class ControllerCatalogOption extends Controller {
         
         
         
-       	   if (isset($this->request->post['beyourjordans'])) {
+       	   if (isset($this->request->post['beyourjordans'])&&$this->request->post['beyourjordans']!='') {
                 $url=$this->request->post['beyourjordans'];
-                
-                
                 $html = file_get_contents($url);
-               
-
-               
-               
                 $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/"; 
                 
                 
@@ -223,9 +248,6 @@ class ControllerCatalogOption extends Controller {
                 $mainimageurl=$mainimg[1][0];
                  /*******eof主图********/
                 
-               
-               
-               
                 /*******bof细节图********/
                 preg_match_all('/class="gallery-image"(.*?)<\/div/s',$html,$imgmatchs);
                 preg_match_all('/src="(.*?)"/s',$imgmatchs[1][0],$imagearrays);
@@ -250,12 +272,6 @@ class ControllerCatalogOption extends Controller {
                
                
                 /*******eof价格********/
-               
-               
-               
-               
-               
-               
                
                 
                 $data['image_dir']= date("Ym").'/'.date("d");
@@ -287,7 +303,110 @@ class ControllerCatalogOption extends Controller {
 			}
 
 
-        
+    /****************************/
+     if (isset($this->request->post['perfectkickz'])) {
+        $url=$this->request->post['perfectkickz'];
+         
+         
+         
+         
+        $html=$this->curl_getcontent($url);
+
+         
+
+        $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/"; 
+
+        /*******bof产品名称********/
+        preg_match_all('/<title>(.*?)<\/title/s',$html,$matchs);
+
+        $productname=$matchs[1][0];
+        $productname =trim($productname);
+         
+        /*******eof产品名称********/
+
+
+        /*******bof主图********/
+        preg_match_all('/<div id="bigPic" class="jqzoom">(.*?)<\/div/s',$html,$mainimage);
+        preg_match_all('/src="(.*?)"/s',$mainimage[1][0],$mainimg);
+         
+        $mainimageurl='http://www.perfectkickz.ru'.str_replace("thumbnail","big",$mainimg[1][0]);
+        /*******eof主图********/
+
+         
+        /*******bof细节图********/
+        preg_match_all('/<div class="art-content">(.*?)<div class="ad-sc-lc">/s',$html,$imgmatchs);
+        preg_match_all('/src="(.*?)"/s',$imgmatchs[1][0],$imagearrays);
+
+         
+        $images=$imagearrays[1];
+        $images = array_map(create_function('$item', 'return "http://www.perfectkickz.ru$item";'), $images); 
+         
+                  
+        /*******bof细节图********/
+
+
+       /*******bof尺码********/
+       preg_match_all('/<div class="text">(.*?)<\/div/s',$html,$sizematchs);
+       preg_match_all('/title="(.*?)"/s',$sizematchs[1][0],$sizearray);
+       $size=implode('|||',$sizearray[1]);
+       $size=str_replace("|||Click to cancel selection","",$size); 
+         
+       /*******bof尺码********/ 
+
+
+
+        /*******bof价格********/
+        preg_match_all('/<li class="price-area">(.*?)<\/del/s',$html,$pricedate);
+        preg_match_all('/\d+/',$pricedate[1][0],$price); 
+         
+         
+       // $price=str_replace("$","",$pricedate[1][0]);
+        $data['price']=$price[0][0];
+
+         
+         
+         
+        preg_match_all('/<li class="price-area">(.*?)<\/li/s',$html,$pricedate);
+        preg_match_all('/<strong id="my_price">(.*?)<\/strong/s',$pricedate[1][0],$pricedate);  
+        preg_match_all('/\d+/',$pricedate[1][0],$specil); 
+        $data['special']=$specil[0][0];
+
+
+        /*******eof价格********/
+
+
+        $data['image_dir']= date("Ym").'/'.date("d");
+        $images=implode('|||',$images);
+        $images=str_replace("http://www.perfectkickz.ru//platform.instagram.com/en_US/embeds.js|||","",$images); 
+         
+        $data['images']=$mainimageurl.'|||'.$images;
+
+
+
+        $data['product_name']= $productname;
+        $data['size']=$size;
+
+         
+         
+        $data['topcategories']=$this->model_catalog_product->getTopcategories();
+        $data['token']=$this->session->data['token'];
+
+
+        $productnum=$this->model_catalog_product->getProductNum();
+        $data['products_date_added'] = date('Y-m-d');
+        if($productnum[0]['products_date_added']!=$data['products_date_added']){
+             $data['products_number']=0;
+             $this->model_catalog_product->updateProductNum($data);
+             $imgcount=0;
+        }else{
+            $imgcount=$productnum[0]['products_number'];
+            $data['model']='16'.date("md").$imgcount;
+            $data['products_number']=$imgcount+1;
+            $this->model_catalog_product->updateProductNum($data);
+        }
+
+    }
+    /*******************************/    
         
         
         

@@ -40,6 +40,8 @@
                                         <tr>
                                             <td style="width:100px;" class="text-left">商品上传</td>
                                              <td class="text-center"><lable>beyourjordans.club商品网站:</lable><input id="beyourjordans" class="form-control" name="beyourjordans" value="" type="text"></td>
+                                             
+                                             <td class="text-center"><lable>perfectkickz.ru商品网站:</lable><input id="perfectkickz" class="form-control" name="perfectkickz" value="" type="text"></td>
                                             <td class="text-right"><button type="submit" form="form-status" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="保存"><i class="fa fa-save"></i></button></td>
                                         </tr>
                                     </tbody>
@@ -102,6 +104,7 @@
                                             <td style="width: 300px;" class="text-left">商品分类</td>
                                             <td style="width: 120px;" class="text-left">型号</td>
                                             <td style="width: 100px;" class="text-right">价格</td>
+                                            <td style="width: 100px;" class="text-right">特价</td>
                                             <td style="width: 200px;" class="text-center">尺码名称</td>
                                             <td style="width: 300px;" class="text-center">尺码值</td>
                                             <td style="width: 120px;" class="text-left">图片</td>
@@ -126,6 +129,7 @@
                                              <td class="text-center"><input class="form-control" name="model1" type="text" value="<?php echo $model;  ?>"></td>
                                              <td style="display:none;" class="text-center"><input class="form-control" name="imagedir1" type="text" value="<?php echo $image_dir;  ?>"></td>
                                              <td class="text-center"><input class="form-control" name="price1" type="text" value="<?php echo $price;  ?>"></td>
+                                             <td class="text-center"><input class="form-control" name="special" type="text" value="<?php echo $special;  ?>"></td>
                                              <td class="text-center"><input id="optionname" class="form-control" name="optiona1" type="text" value="Size"></td>
                                              <td class="text-center"><input id="optionvalue" class="form-control" name="valuea1" type="text" value="<?php echo $size;  ?>"></td>
                                              <td class="text-center"><input class="form-control" name="image1" type="text" value="<?php echo $images;  ?>"></td>

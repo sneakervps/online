@@ -78,11 +78,27 @@ class ControllerCatalogProduct extends Controller {
               $url[10]='http://www.sneakersite.ru/jk.php';
               //$key="Y4filUxH";
             /****************************/
-
-                foreach ($url as $value) {
+              
+              
+              $success='';
+                foreach ($url as $key=>$value) {
                     $result=$this->curl_post($value, $data);
-                    echo $result;
+                    if($result){
+                       $success=$success.'|||'.$key;
+                    }
                   }
+            
+              $this->session->data['success'] = $success;
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
           }  
              
         }

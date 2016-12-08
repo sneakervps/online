@@ -61,19 +61,26 @@ class ControllerCatalogFilter extends Controller {
 
             
             
-             /****************************/
+             /***************************/
+              $url[1]='http://www.sneakeradd.me/online.php';
+              $url[2]='http://www.sneakerbook.top/online.php';
+              $url[4]='http://www.footwearlocker.cc/online.php';
+              $url[5]='http://www.sneakerpage.ru/online.php';
               $url[6]='http://www.sneakerjump.us/online.php';
+              $url[7]='http://www.sneakerfile.cc/online.php';
+              $url[8]='http://www.stayfashion.ru/online.php';
+              $url[9]='http://www.sneakerahead.ru/online.php';
+              $url[10]='http://www.sneakersite.ru/online.php';
             /****************************/
-
-            
-                foreach ($url as $value) {
+                $success='';
+                foreach ($url as $key=>$value) {
                     $result=$this->model_catalog_image_rename->curl_post($value, $imagedata);
                     if($result){
-                        $this->session->data['success'] = $this->language->get('text_success');
+                       $success=$success.'|||'.$key;
                     }
                   }
             
-            
+              $this->session->data['success'] = $success;
             
 
 			$this->response->redirect($this->url->link('catalog/filter', 'token=' . $this->session->data['token'], true));
