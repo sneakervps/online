@@ -21,6 +21,7 @@ if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='priceadd'&&$_POST['model']) 
 			$products_price = zen_db_prepare_input($_POST['products_price']);
 			if($products_price){
 				$db -> Execute ("UPDATE " . TABLE_PRODUCTS . " SET `products_price`='" . $products_price . "' WHERE `products_id`='" . $products_id . "'");
+				echo $products_id;
 			}
 			if($_POST['specials']){
 				if($_POST['specialstime']){
@@ -42,6 +43,7 @@ if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='priceadd'&&$_POST['model']) 
                             '".$nowday."',
                             '".$expiredate."', '1', '".$nowday."')");
 				}
+				echo $specials;
 			}
 		}
 }

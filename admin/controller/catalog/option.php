@@ -85,13 +85,26 @@ class ControllerCatalogOption extends Controller {
               
               
 
-               $url[1]='http://www.beyourjordans.ru/jk.php';
+               //$url[1]='http://www.beyourjordans.ru/jk.php';
+              // $url[2]='http://localhost/opencart/index.php?route=tool/import';
+               $url[3]='http://www.trendtide.ru/index.php?route=tool/import';
+              //exit();
                //$url[2]='http://www.9201688.com/jk.php';
             /****************************/
 
-                foreach ($url as $value) {
+                $success='';
+                foreach ($url as $key=>$value) {
                     $result=$this->curl_post($value, $data);
+                    if($result){
+                       $success=$success.'|||'.$key;
+                    }
                   }
+            
+              $this->session->data['success'] = $success;
+              
+              
+              
+              
           }  
              $this->response->redirect($this->url->link('catalog/option', 'token=' . $this->session->data['token'], true));
         }
@@ -268,10 +281,21 @@ function  curl_getcontent($url){
                 preg_match_all('/<span class="price">(.*?)</s',$html,$pricedate);
                 $price=str_replace("$","",$pricedate[1][0]);
                 $data['price']=$price;
-               
-               
-               
                 /*******eof价格********/
+                    
+                    
+      
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                
                 
                 $data['image_dir']= date("Ym").'/'.date("d");
@@ -362,7 +386,20 @@ function  curl_getcontent($url){
          
        // $price=str_replace("$","",$pricedate[1][0]);
         $data['price']=$price[0][0];
-
+         /**********************************/
+         
+                 /*******bof分类********/
+        preg_match_all('/<div class="position">(.*?)<\/div/s',$html,$catedate);
+        preg_match_all('/">(.*?)<\/a/s',$catedate[1][0],$catedate);
+         
+         
+        if(isset($catedate[1][2])){
+            $cate=$catedate[1][1].'|||'.$catedate[1][2];
+        }else{
+            $cate=$catedate[1][1];
+        }
+        $data['cate']=$cate;
+        /*******bof分类********/    
          
          
          

@@ -123,9 +123,7 @@
                                             <td class="text-center">
                                              <input name="selected[]" value="42" type="checkbox"> </td>
                                              <td class="text-center"><input class="form-control" name="name1" type="text" value="<?php echo $product_name;  ?>"></td>
-                                             <td class="text-center"><input class="form-control" id="cate" name="category1" type="text" value="<?php if(isset($_COOKIE["category"])){
-                                            echo $_COOKIE["category"];
-                                            } ?>"></td>
+                                             <td class="text-center"><input class="form-control" id="cate" name="category1" type="text" value="<?php echo $cate; ?>"></td>
                                              <td class="text-center"><input class="form-control" name="model1" type="text" value="<?php echo $model;  ?>"></td>
                                              <td style="display:none;" class="text-center"><input class="form-control" name="imagedir1" type="text" value="<?php echo $image_dir;  ?>"></td>
                                              <td class="text-center"><input class="form-control" name="price1" type="text" value="<?php echo $price;  ?>"></td>
