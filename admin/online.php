@@ -118,7 +118,7 @@ $_POST['key']='Y4filUxH';
 $_POST['postdate']='imageupdate';
 $_POST['images']='http://online.sneakercon.biz/upload/201612/1612055/1612055.jpg|||http://online.sneakercon.biz/upload/201612/1612055/1612055_001.jpg|||http://online.sneakercon.biz/upload/201612/1612055/1612055_002.jpg|||http://online.sneakercon.biz/upload/201612/1612055/1612055_003.jpg';
 $_POST['model']='1612055';
-    */
+*/
 /*********bof更新图片*******/
 if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='imageupdate'&&$_POST['images']!='') {
     
@@ -194,6 +194,7 @@ function remote($urls, $name = '', $path = '', $dir = './') {
 }
 
 /*********bof更新图片*******/
+
 
 
 
@@ -329,7 +330,82 @@ if (!empty($_POST['options_name1'])) { // 属性
 
 
 
+/*********
+   $_POST['key']='Y4filUxH';
+   $_POST['postdate']='optionedit';
+   $_POST['model']='1612132';  
+   $_POST['option_name']='Men Size';
+   $_POST['option_value']='US13/UK12/EURO47';
+   $_POST['option_status']=0;
+
+/*********bof尺码上架下架*******/
+if ($_POST['key']=='Y4filUxH'&&$_POST['postdate']=='optionedit'&&$_POST['model']!='') {
+    $products = $db -> Execute ("SELECT products_id FROM " . TABLE_PRODUCTS . " WHERE products_model='" . $_POST['model'] . "'");
+    $products_id = $products -> fields['products_id'];
+    
+    if(!empty($products_id)){
+        $products_options = $db -> Execute ("SELECT products_options_id FROM " . TABLE_PRODUCTS_OPTIONS . " WHERE products_options_name='" . $_POST['option_name'] . "'");
+        $products_options_id = $products_options -> fields['products_options_id'];
+        if(!empty($products_options_id)){
+            $products_options_value = $db -> Execute ("SELECT products_options_values_id FROM " . TABLE_PRODUCTS_OPTIONS_VALUES . " WHERE products_options_values_name='" . $_POST['option_value'] . "'");
+            
+            
+            $products_options_values_id = '';
+            $i=0;
+            while (!$products_options_value -> EOF) {
+                if($i==0){
+                    $products_options_values_id=$products_options_value -> fields['products_options_values_id'];
+                    $products_options_values_frist_id=$products_options_values_id;
+                }else{
+                    $products_options_values_id=$products_options_values_id.','.$products_options_value -> fields['products_options_values_id'];
+                }
+                $i++;
+              $products_options_value -> MoveNext();
+            }
+            
+            
+            if(!empty($products_options_values_id)){
+                if($_POST['option_status']==0){
+                    
+                    $sql="DELETE FROM " . TABLE_PRODUCTS_ATTRIBUTES . "  WHERE `products_id`='" .$products_id . "' and `options_id`='" .$products_options_id . "' and options_values_id in (".$products_options_values_id.")";
+                    
+                    //echo $sql;
+                    $result=$db -> Execute($sql);
+                    if($result){echo 'del';}
+                }else{
+                        $products_attributes= $db -> Execute ("SELECT products_attributes_id FROM " . TABLE_PRODUCTS_ATTRIBUTES . " WHERE products_id='" . $products_id . "' and `options_id`='" .$products_options_id . "' and options_values_id in (".$products_options_values_id.")");
+                         $products_attributes_id = $products_attributes -> fields['products_attributes_id'];
+                        if(empty($products_attributes_id)){
+                             $result=$db -> Execute("insert into " . TABLE_PRODUCTS_ATTRIBUTES . " (products_id, options_id, options_values_id) values('" . $products_id . "', '" . $products_options_id . "', '" . $products_options_values_frist_id . "')");
+                             if($result){echo 'add';} 
+                        }
+                }
+                
+            }
+        }
+        
+        
+    }    
+}
+
+/*********bof尺码上架下架*******/
+
+
+
+    
+
+
+
+
+
+
+
+?>
+
+<!--
+
 /*************在线发布*******************/
+
 
 if (empty($_POST)) {
 	foreach (locoy_zen_get_category_tree() as $key => $value) { // 刷新分类列表
@@ -677,7 +753,7 @@ function dmkdir($dir, $mode = 0777) {
 
 
 /*************在线发布*******************/
-
+-->
 
 
 

@@ -102,15 +102,6 @@ class ControllerCatalogRecurring extends Controller {
             
               $this->session->data['success'] = $success; 
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
             }
 
 			$this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
@@ -166,14 +157,6 @@ class ControllerCatalogRecurring extends Controller {
                   }
             
               $this->session->data['success'] = $success; 
-                
-                
-                
-                
-                
-                
-                
-                
             }
 
 			$this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
@@ -219,23 +202,18 @@ class ControllerCatalogRecurring extends Controller {
               $url[7]='http://www.stayfashion.ru/online.php';
               $url[8]='http://www.sneakersite.ru/online.php';
               $url[9]='http://www.sneakerahead.ru/online.php';
+                
+
             /****************************/  
                 $success='';
                 foreach ($url as $key=>$value) {
                      $result=$this->curl_post($value, $statusdata);
                     if($result){
-                       $success=$success.'|||'.$key;
+                       $success=$success.'|||'.$key.$result;
                     }
                   }
             
               $this->session->data['success'] = $success; 
-                
-                
-                
-                
-                
-                
-                
             }
             $this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
 		}
@@ -367,12 +345,6 @@ class ControllerCatalogRecurring extends Controller {
               $this->session->data['success'] = $success; 
                 
                 
-                
-                
-                
-                
-                
-                
             }
 
 			$this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
@@ -383,7 +355,73 @@ class ControllerCatalogRecurring extends Controller {
     
     
     
+   
     
+    
+   
+  public function optionedit() {
+		$this->load->language('catalog/recurring');
+
+		$this->document->setTitle($this->language->get('heading_title'));
+
+		$this->load->model('catalog/recurring');
+
+		if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
+            
+            if (isset($this->request->post['model'])) {
+			$optiondata['model'] = $this->request->post['model'];
+            }
+            
+            if (isset($this->request->post['option_name'])) {
+			$optiondata['option_name'] = $this->request->post['option_name'];
+            }
+            
+            if (isset($this->request->post['option_value'])) {
+			$optiondata['option_value'] = $this->request->post['option_value'];
+            }
+            
+            if (isset($this->request->post['option_status'])) {
+			$optiondata['option_status'] = $this->request->post['option_status'];
+            }
+            
+            
+            
+            
+            if($optiondata['model']!=''&&$optiondata['option_name']!=''&&$optiondata['option_value']!=''){
+              $key="Y4filUxH";
+              $optiondata['key']=$key;
+              $optiondata['postdate']='optionedit';  
+                /****/
+              $url[1]='http://www.sneakeradd.me/online.php';
+              $url[2]='http://www.sneakerbook.top/online.php';
+              $url[3]='http://www.footwearlocker.cc/online.php';
+              $url[4]='http://www.sneakerpage.ru/online.php';
+              $url[5]='http://www.sneakerjump.us/online.php';
+              $url[6]='http://www.sneakerfile.cc/online.php';
+              $url[7]='http://www.stayfashion.ru/online.php';
+              $url[8]='http://www.sneakersite.ru/online.php';
+              $url[9]='http://www.sneakerahead.ru/online.php';
+            /****************************/
+               $site=array(1=>'add',2=>'book',3=>'foot',4=>'page',5=>'jump',6=>'file',7=>'stay',8=>'site',9=>'head');
+
+              $success='';
+                foreach ($url as $key=>$value) {
+                     $result=$this->curl_post($value, $optiondata);
+                    if($result){
+                       $success=$success.'|||'.$site[$key].'-'.$result;
+                    }
+                  }
+            
+              $this->session->data['success'] = $success; 
+                
+                
+            }
+
+			$this->response->redirect($this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true));
+		}
+
+		//$this->getList();
+	}    
     
     
     
@@ -526,6 +564,7 @@ class ControllerCatalogRecurring extends Controller {
         $data['statusaction'] = $this->url->link('catalog/recurring/statusedit', 'token=' . $this->session->data['token'], true);
         $data['westernunionaction'] = $this->url->link('catalog/recurring/westernunionedit', 'token=' . $this->session->data['token'], true);
         $data['sizeaction'] = $this->url->link('catalog/recurring/sizeedit', 'token=' . $this->session->data['token'], true);
+        $data['optionaction'] = $this->url->link('catalog/recurring/optionedit', 'token=' . $this->session->data['token'], true);
         $data['productnameaction'] = $this->url->link('catalog/recurring/updatename', 'token=' . $this->session->data['token'], true);
         
         

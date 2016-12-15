@@ -327,7 +327,7 @@ function  curl_getcontent($url){
 			}
 
 
-    /****************************/
+    /****************perfectkickz采集************/
      if (isset($this->request->post['perfectkickz'])) {
         $url=$this->request->post['perfectkickz'];
          
@@ -388,12 +388,13 @@ function  curl_getcontent($url){
         $data['price']=$price[0][0];
          /**********************************/
          
-                 /*******bof分类********/
+        /*******bof分类********/
         preg_match_all('/<div class="position">(.*?)<\/div/s',$html,$catedate);
         preg_match_all('/">(.*?)<\/a/s',$catedate[1][0],$catedate);
          
-         
-        if(isset($catedate[1][2])){
+        if(isset($catedate[1][3])){
+            $cate=$catedate[1][1].'|||'.$catedate[1][2].'|||'.$catedate[1][3];
+        }elseif(isset($catedate[1][2])){
             $cate=$catedate[1][1].'|||'.$catedate[1][2];
         }else{
             $cate=$catedate[1][1];
