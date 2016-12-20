@@ -63,9 +63,6 @@ public function curl_post($url, $data)
     
 public function frename($dirname,$imagename='',$imgnum='0'){
     
-    
-   
-    
    $productnum=$this->model_catalog_product->getProductNum();
    $data['products_date_added'] = date('Y-m-d');
     if($productnum[0]['products_date_added']!=$data['products_date_added']){
@@ -184,29 +181,29 @@ foreach($imagesfile as $key=>$value){
         $path = pathinfo($curDir);
         if($imagename!=''){ //更新图片
              $products_image_name=$imagename;
-             $pathname='../upload/'.date("Ym").'/'.$products_image_name;
+             $pathname='../upload/'.date("Ym").'/'.date("d").'/'.$products_image_name;
             }else{   //新产品图片
              $products_image_name=date("md");
              $products_image_name='16'.$products_image_name.$imgcount;
-             $pathname='../upload/'.date("Ym").'/'.$products_image_name;
+             $pathname='../upload/'.date("Ym").'/'.date("d").'/'.$products_image_name;
             }
     
          if($path['extension']=='jpg'||$path['extension']=='JPG'){
             if($i==$imgnum){
               $this->createDir($pathname);
               @$newname = $pathname.'/'.$products_image_name.'.jpg';
-              $image_url=$image_url.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg<br />';
-              $image_url_main='http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'.jpg';
+              $image_url=$image_url.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.date("d").'/'.$products_image_name.'/'.$products_image_name.'.jpg<br />';
+              $image_url_main='http://online.sneakercon.biz/upload/'.date("Ym").'/'.date("d").'/'.$products_image_name.'/'.$products_image_name.'.jpg';
               $product[$imgcount]['image_name']= $products_image_name; 
               $product[$imgcount]['image_dir']= date("Ym").'/'.date("d"); 
             }else{
               @$newname = $pathname.'/'.$products_image_name.'_'.$count.'.jpg';
-              $addimage_url=$addimage_url.'|||'.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.$products_image_name.'/'.$products_image_name.'_'.$count.'.jpg';
+              $addimage_url=$addimage_url.'|||'.'http://online.sneakercon.biz/upload/'.date("Ym").'/'.date("d").'/'.$products_image_name.'/'.$products_image_name.'_'.$count.'.jpg';
             }
 
 
             //图片压缩成800,600
-            $this->resize($curDir,1000,800);
+            //$this->resize($curDir,1000,800);
             rename($curDir,$newname);   
             $i++; 
         }

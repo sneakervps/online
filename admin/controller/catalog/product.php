@@ -325,6 +325,18 @@ function curl_post($url, $data)
             
         $data['topcategories']=$this->model_catalog_product->getTopcategories();
         
+        
+        if (isset($this->error['warning'])) {
+			$data['error_warning'] = $this->error['warning'];
+		} else {
+			$data['error_warning'] = '';
+		}
+        
+        if(!isset($data['success'])){
+            $data['success'] = '';
+        }
+        
+        
        // $data['topcategories']=$this->model_catalog_product->getSubCategories(624);
         
 		$data['header'] = $this->load->controller('common/header');
