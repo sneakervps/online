@@ -120,3 +120,15 @@ $_['text_faq']		 			     = '常见问题与解答';
 $_['text_faq_config']	 			 = '常见问题设置';
 $_['text_excelexportimport']	     = 'Excel导入导出';
 $_['text_export_import']             = 'Export / Import';
+
+
+
+
+$_['text_website']	 			 = '网站添加/修改';
+$_['text_enyupoo']	 			 = '英文又拍发布';
+
+
+
+
+
+

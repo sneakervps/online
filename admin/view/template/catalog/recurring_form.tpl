@@ -41,6 +41,23 @@
           </div>
           <fieldset>
             <legend><?php echo $text_profile; ?></legend>
+            
+           <div class="form-group">
+              <label class="col-sm-2 control-label" for="input-price"><?php echo $entry_price; ?></label>
+              <div class="col-sm-10">
+                   <label class="checkbox inline">
+                      <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                    </label>
+                    <label class="checkbox inline">
+                      <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                    </label>
+                    <label class="checkbox inline">
+                      <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                    </label>
+              </div>
+            </div>
+            
+            
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-price"><?php echo $entry_price; ?></label>
               <div class="col-sm-10">

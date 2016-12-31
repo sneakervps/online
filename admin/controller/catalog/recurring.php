@@ -392,6 +392,12 @@ class ControllerCatalogRecurring extends Controller {
               $optiondata['key']=$key;
               $optiondata['postdate']='optionedit';  
                 /****/
+                
+                
+                
+                
+                
+                
               $url[1]='http://www.sneakeradd.me/online.php';
               $url[2]='http://www.sneakerbook.top/online.php';
               $url[3]='http://www.footwearlocker.cc/online.php';
@@ -401,6 +407,8 @@ class ControllerCatalogRecurring extends Controller {
               $url[7]='http://www.stayfashion.ru/online.php';
               $url[8]='http://www.sneakersite.ru/online.php';
               $url[9]='http://www.sneakerahead.ru/online.php';
+                
+                
             /****************************/
                $site=array(1=>'add',2=>'book',3=>'foot',4=>'page',5=>'jump',6=>'file',7=>'stay',8=>'site',9=>'head');
 

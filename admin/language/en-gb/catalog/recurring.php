@@ -1,7 +1,7 @@
 <?php
 
 // Heading
-$_['heading_title']			= '分期付款';
+$_['heading_title']			= '批量修改';
 
 // Text
 $_['text_success']          = '成功: 已修改分期付款！';
@@ -14,7 +14,7 @@ $_['text_semi_month']		= '半月';
 $_['text_month']			= '月';
 $_['text_year']				= '年';
 $_['text_recurring']	    = '<p><i class="fa fa-info-circle"></i> 分期付款金额根据单位和单位的数量而计算出来。</p><p>例如，如果单位为周，单位数量为2，则每两周会付款一次。</p><p>The duration is the number of times the user will make a payment, set this to 0 if you want payments until they are cancelled.</p>';
-$_['text_profile']			= '分期付款';
+$_['text_profile']			= '批量修改';
 $_['text_trial']			= '试用';
 
 // Entry

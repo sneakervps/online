@@ -1,5 +1,5 @@
 <?php
-class ControllerCatalogCategory extends Controller {
+class ControllerCatalogEnyupoo extends Controller {
 	private $error = array();
 
 	public function index() {
@@ -33,12 +33,14 @@ class ControllerCatalogCategory extends Controller {
             }
             
             if (isset($this->request->post['imagedir1'])) {
-			$data['images_dir'] = $this->request->post['imagedir1'];
+			      $data['images_dir'] = $this->request->post['imagedir1'];
             }
             
             if (isset($this->request->post['image1'])) {
-			$data['images'] = $this->request->post['image1'];
+			      $data['images'] = $this->request->post['image1'];
+
             }        
+            
             
             if (isset($this->request->post['price1'])) {
 			$data['price'] = $this->request->post['price1'];
@@ -75,7 +77,7 @@ class ControllerCatalogCategory extends Controller {
               
               
               $cats = array_filter(explode('|||', $data['category']));
-              $language_id=2;   //语言id
+              $language_id=1;   //语言id
               $parent_id = 0;
                 foreach ($cats as $key => $value) {
                     $parent_id=$this->model_catalog_category->create_category($value, $parent_id, $language_id);
@@ -83,7 +85,7 @@ class ControllerCatalogCategory extends Controller {
               
               
 
-               $url[1]='http://www.9201688.com/jk.php';
+               $url[1]='http://www.sneakerboost.ru/jk.php';
                //$url[2]='http://www.9201688.com/jk.php';
             /****************************/
 
@@ -91,7 +93,7 @@ class ControllerCatalogCategory extends Controller {
                     $result=$this->curl_post($value, $data);
                   }
           }  
-             $this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'], true));
+             $this->response->redirect($this->url->link('catalog/enyupoo', 'token=' . $this->session->data['token'], true));
         }
 
 		$this->getList();
@@ -121,7 +123,51 @@ class ControllerCatalogCategory extends Controller {
   }   
     
     
+    
+    
+    
+    
+    
 
+ function remote($urls, $name = '', $path = '', $dir = './') {
+	if (!is_array($urls) or count($urls) == 0) {
+		return false;
+	}
+	$this->dmkdir($dir);
+	foreach($urls as $k => $v) {
+		
+		if (!empty($v) && preg_match("~^http~i", $v)) {
+			$nurl[$k] = trim($v);
+			if ($k == 0) {
+				$fname[$k] = strtolower($name . '.jpg');
+			} else {
+				$count = sprintf("%03d",$k);
+				$fname[$k] = strtolower($name . '_' . $count . '.jpg');
+			}
+			$data = file_get_contents($nurl[$k]);
+			$filedir[$k] = $dir . $fname[$k];
+			 file_put_contents($filedir[$k], $data);
+			 $filepath[$k] = HTTP_CATALOG.'image/enyupoo/'.$path . $fname[$k];
+		}
+	
+	}
+	  return $filepath;
+}   
+    
+    
+    
+function dmkdir($dir, $mode = 0777) {
+	if (!is_dir($dir)) {
+		$this->dmkdir(dirname($dir));
+		@mkdir($dir, $mode);
+		@touch($dir . '/index.htm');
+		@chmod($dir . '/index.htm', 0777);
+	}
+	return true;
+}    
+    
+    
+    
     
     
     
@@ -264,7 +310,8 @@ function getsize($productsname) {
                 $data['images']=str_replace("small.jpg","big.jpg",$data['images']);
                 $data['images']=str_replace("square.jpg","big.jpg",$data['images']);
                 
-               
+              
+
                 
                 $data['product_name']= $productname;
                 $data['size']=$this->getsize($productname);
@@ -276,9 +323,11 @@ function getsize($productsname) {
                 $productnum=$this->model_catalog_product->getProductNum();
                 $data['products_date_added'] = date('Y-m-d');
                 if($productnum[0]['products_date_added']!=$data['products_date_added']){
-                     $data['products_number']=0;
+                     $data['products_number']=2;
+                     $imgcount=1;
+                     $data['model']='16'.date("md").$imgcount;
                      $this->model_catalog_product->updateProductNum($data);
-                     $imgcount=0;
+                     
                 }else{
                     $imgcount=$productnum[0]['products_number'];
                     $data['model']='16'.date("md").$imgcount;
@@ -286,7 +335,10 @@ function getsize($productsname) {
                     $this->model_catalog_product->updateProductNum($data);
                 }
                 
-                
+               $array_imgs=explode('|||',$data['images']);
+               $products_image_name=$data['model']; 
+               $file_imgs =$this->remote(array_unique(array_filter($array_imgs)), $products_image_name, $data['image_dir'] . "/", "../image/enyupoo/" . $data['image_dir'] . "/");
+               $data['images']=implode('|||',$file_imgs); 
                 
                 
                 
@@ -302,7 +354,7 @@ function getsize($productsname) {
         
         
 
-        $data['add'] = $this->url->link('catalog/category/add', 'token=' . $this->session->data['token'], true);
+        $data['add'] = $this->url->link('catalog/enyupoo/add', 'token=' . $this->session->data['token'], true);
         
         
         
@@ -351,12 +403,12 @@ function getsize($productsname) {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true)
+			'href' => $this->url->link('catalog/enyupoo', 'token=' . $this->session->data['token'] . $url, true)
 		);
 
 
-		$data['delete'] = $this->url->link('catalog/category/delete', 'token=' . $this->session->data['token'] . $url, true);
-		$data['repair'] = $this->url->link('catalog/category/repair', 'token=' . $this->session->data['token'] . $url, true);
+		$data['delete'] = $this->url->link('catalog/enyupoo/delete', 'token=' . $this->session->data['token'] . $url, true);
+		$data['repair'] = $this->url->link('catalog/enyupoo/repair', 'token=' . $this->session->data['token'] . $url, true);
 
 		$data['categories'] = array();
 
@@ -414,8 +466,8 @@ function getsize($productsname) {
 			$url .= '&page=' . $this->request->get['page'];
 		}
 
-		$data['sort_name'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&sort=name' . $url, true);
-		$data['sort_sort_order'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&sort=sort_order' . $url, true);
+		$data['sort_name'] = $this->url->link('catalog/enyupoo', 'token=' . $this->session->data['token'] . '&sort=name' . $url, true);
+		$data['sort_sort_order'] = $this->url->link('catalog/enyupoo', 'token=' . $this->session->data['token'] . '&sort=sort_order' . $url, true);
 
 		$url = '';
 
@@ -435,7 +487,7 @@ function getsize($productsname) {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('catalog/category_list', $data));
+		$this->response->setOutput($this->load->view('catalog/enyupoo_list', $data));
 	}
 
     

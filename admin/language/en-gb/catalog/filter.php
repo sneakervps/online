@@ -1,7 +1,7 @@
 <?php
 
 // Heading
-$_['heading_title']     = '筛选';
+$_['heading_title']     = '批量修改图片';
 
 // Text
 $_['text_success']      = '成功: 已经修改筛选！';

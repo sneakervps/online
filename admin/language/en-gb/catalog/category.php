@@ -1,7 +1,7 @@
 <?php
 
 // Heading
-$_['heading_title']          = '分类';
+$_['heading_title']          = '又拍采集发布';
 
 // Text
 $_['text_success']           = '成功: 已经修改分类！';

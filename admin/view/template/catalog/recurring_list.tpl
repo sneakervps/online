@@ -29,6 +29,27 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title"><i class="fa fa-list"></i> 商品列表</h3> </div>
+                        
+                        
+                        
+                        
+                        
+                    <div class="panel-body">    
+                    <div class="col-sm-10">
+                           <label class="checkbox inline">
+                              <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                            </label>
+                            <label class="checkbox inline">
+                              <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                            </label>
+                            <label class="checkbox inline">
+                              <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                            </label>
+                      </div>  
+                      </div>  
+                        
+                        
+                        
                     <div class="panel-body">
                         
                        <form action="<?php echo $priceaction; ?>" method="post" enctype="multipart/form-data" id="form-price" class="form-horizontal">

@@ -149,7 +149,7 @@ $_['tab_sale']                      = '销售';
 $_['tab_marketing']                 = '营销';
 $_['tab_online']                    = '在线会员';
 $_['tab_activity']                  = '最新活动';
-$_['tab_recurring']                 = '分期付款';
+$_['tab_recurring']                 = '批量修改';
 $_['tab_action']                    = '操作';
 $_['tab_thirdparty']                = '外部接口';
 
